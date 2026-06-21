@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find Your Machine in 60 Seconds | WIREXA TECH</title>
+    <meta name="description" content="Answer five quick questions and get a recommended wire processing machine solution instantly.">
+    <link rel="canonical" href="https://wirexatech.com/selector.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Find Your Machine in 60 Seconds | WIREXA TECH">
+<meta property="og:description" content="Answer five quick questions and get a recommended wire processing machine solution instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wirexatech.com/selector.html">
+<meta property="og:image" content="https://wirexatech.com/images/product-main.jpg">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+      :root {
+        --bg: #1a1a1a;
+        --orange: #ff6600;
+        --text: #ffffff;
+        --muted: #c7c7c7;
+        --panel: #242424;
+        --line: rgba(255,255,255,.12);
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .header {
+        background: rgba(26,26,26,.96);
+      }
+
+      .brand span:last-child,
+      .nav-links a {
+        color: var(--text);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .nav-consult,
+      .button.whatsapp,
+      .button.primary {
+        background: var(--orange);
+        color: #1a1a1a !important;
+      }
+
+      .nav-consult {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 9px 14px;
+        border-radius: 8px;
+        font-weight: 800;
+      }
+
+      .selector-shell {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255,255,255,.045);
+        box-shadow: 0 20px 48px rgba(0,0,0,.24);
+      }
+
+      .progress-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      .progress-track {
+        overflow: hidden;
+        height: 10px;
+        border-radius: 8px;
+        background: #2a2a2a;
+      }
+
+      .progress-bar {
+        width: 20%;
+        height: 100%;
+        background: var(--orange);
+        transition: width .25s ease;
+      }
+
+      .question-title {
+        margin: 28px 0 18px;
+        font-size: clamp(1.55rem, 3vw, 2.2rem);
+        line-height: 1.15;
+      }
+
+      .option-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .option-card {
+        width: 100%;
+        min-height: 64px;
+        padding: 18px 20px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #242424;
+        color: #fff;
+        font: inherit;
+        font-weight: 800;
+        text-align: left;
+        cursor: pointer;
+        transition: border-color .2s ease, background .2s ease, transform .2s ease;
+      }
+
+      .option-card:hover,
+      .option-card.selected {
+        border-color: var(--orange);
+        background: rgba(255,102,0,.16);
+        transform: translateY(-1px);
+      }
+
+      .option-key {
+        display: inline-grid;
+        place-items: center;
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        border-radius: 8px;
+        background: rgba(255,102,0,.18);
+        color: var(--orange);
+      }
+
+      .selector-controls {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 22px;
+        flex-wrap: wrap;
+      }
+
+      .selector-note {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: .95rem;
+      }
+
+      .result-panel {
+        display: none;
+        padding: 28px;
+        border-left: 4px solid var(--orange);
+        border-radius: 8px;
+        background: #242424;
+      }
+
+      .result-panel.active {
+        display: block;
+      }
+
+      .result-panel h2 {
+        color: var(--orange);
+      }
+
+      .result-fixed {
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+
+      .unified-footer {
+        background: #141414;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr auto;
+        gap: 22px;
+        align-items: center;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: var(--muted);
+      }
+
+      @media (max-width: 860px) {
+        .nav-actions {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .selector-shell,
+        .result-panel {
+          padding: 20px;
+        }
+
+        .nav-consult,
+        .selector-controls .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="header">
+        <div class="container nav">
+          <a class="brand" href="index.html" aria-label="WIREXA home"><span class="brand-mark">W</span><span class="brand-copy"><span class="brand-name">WIREXA TECH</span><small class="brand-sub">Wire Processing Solutions</small></span></a>
+          <div class="nav-actions">
+            <nav class="nav-links" aria-label="Main navigation">
+              <a href="products.html">Products</a>
+              <a href="fault-feeding-error.html">Fault Solutions</a>
+              <a href="cases.html">Cases</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+            <div class="language-switcher" aria-label="Language selector"><a href="index.html">EN</a><span class="divider">|</span><a href="index-ru.html">RU</a><span class="divider">|</span><a href="index-pt.html">PT</a></div>
+            <a class="nav-consult" href="https://wa.me/8618066282233?text=Hello%2C%20I%20used%20the%20machine%20selector%20and%20need%20a%20quotation." target="_blank" rel="noopener">Free Consultation</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="container hero compact">
+          <div>
+            <h1>Find Your Machine in 60 Seconds</h1>
+            <p class="lead">Answer 5 questions. Get a recommended solution instantly.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="selector-shell" id="quizPanel">
+              <div class="progress-top">
+                <span id="stepLabel">Step 1/5</span>
+                <span>60-second selector</span>
+              </div>
+              <div class="progress-track" aria-label="Question progress">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+              <h2 class="question-title" id="questionTitle"></h2>
+              <div class="option-grid" id="optionGrid"></div>
+              <p class="selector-note">Click one option to continue. You can go back and change your answer.</p>
+              <div class="selector-controls">
+                <button class="button secondary" type="button" id="backButton">Back</button>
+                <button class="button secondary" type="button" id="restartButton">Restart</button>
+              </div>
+            </div>
+
+            <div class="result-panel" id="resultPanel" aria-live="polite">
+              <h2 id="resultTitle"></h2>
+              <p id="resultDescription"></p>
+              <p id="resultNote"></p>
+              <div class="actions">
+                <a class="button whatsapp" href="https://wa.me/8618066282233?text=Hello%2C%20I%20used%20the%20machine%20selector%20and%20need%20a%20quotation." target="_blank" rel="noopener">Get Quotation on WhatsApp &rarr;</a>
+                <button class="button secondary" type="button" id="resultRestartButton">Start Again</button>
+              </div>
+              <div class="result-fixed">
+                <a class="card-link" href="https://wa.me/8618066282233?text=Hello%2C%20I%20used%20the%20machine%20selector%20and%20need%20a%20quotation." target="_blank" rel="noopener">Not sure? Send your wire photo and production target directly on WhatsApp &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer unified-footer">
+        <div class="container footer-grid">
+          <div><strong>WIREXA TECH</strong><br><span>Ruian, Wenzhou, China</span></div>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="product-wire-stripping-machine.html">Products</a>
+            <a href="fault-feeding-error.html">Fault Solutions</a>
+            <a href="cases.html">Cases</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <a class="button whatsapp" href="https://wa.me/8618066282233?text=Hello%2C%20I%20used%20the%20machine%20selector%20and%20need%20a%20quotation." target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </footer>
+    </div>
+    <a class="floating-whatsapp" href="https://wa.me/8618066282233?text=Hello%2C%20I%20used%20the%20machine%20selector%20and%20need%20a%20quotation." target="_blank" rel="noopener">Contact on WhatsApp</a>
+
+    <script>
+      const whatsappHref = "https://wa.me/8618066282233?text=Hello%2C%20I%20used%20the%20machine%20selector%20and%20need%20a%20quotation.";
+
+      const steps = [
+        {
+          id: "task",
+          title: "What do you need to do?",
+          options: [
+            ["A", "Strip wire only", "strip-only"],
+            ["B", "Cut wire to length", "cut-only"],
+            ["C", "Strip + Cut (both ends)", "strip-cut"],
+            ["D", "Crimp terminals", "crimp"]
+          ]
+        },
+        {
+          id: "wireSize",
+          title: "What is your wire size range?",
+          options: [
+            ["A", "Very fine wire (0.1 ~ 0.5 mm²)", "fine"],
+            ["B", "Standard wire (0.5 ~ 6 mm²)", "standard"],
+            ["C", "Heavy wire (6 ~ 16 mm²)", "heavy"],
+            ["D", "Not sure", "not-sure"]
+          ]
+        },
+        {
+          id: "production",
+          title: "What is your daily production target?",
+          options: [
+            ["A", "Less than 500 pcs/day (sample or repair)", "lt-500"],
+            ["B", "500 ~ 3,000 pcs/day (small batch)", "500-3000"],
+            ["C", "3,000 ~ 10,000 pcs/day (regular production)", "3000-10000"],
+            ["D", "More than 10,000 pcs/day (high volume)", "gt-10000"]
+          ]
+        },
+        {
+          id: "bothEnds",
+          title: "Do you need both ends processed?",
+          options: [
+            ["A", "One end only", "one-end"],
+            ["B", "Both ends", "both-ends"],
+            ["C", "Not sure", "not-sure"]
+          ]
+        },
+        {
+          id: "location",
+          title: "Where are you located?",
+          options: [
+            ["A", "Southeast Asia", "southeast-asia"],
+            ["B", "South Asia (India, Pakistan)", "south-asia"],
+            ["C", "Middle East / Africa", "middle-east-africa"],
+            ["D", "South America", "south-america"],
+            ["E", "Europe / Russia", "europe-russia"],
+            ["F", "Other", "other"]
+          ]
+        }
+      ];
+
+      const answers = {};
+      let currentStep = 0;
+
+      const quizPanel = document.getElementById("quizPanel");
+      const resultPanel = document.getElementById("resultPanel");
+      const stepLabel = document.getElementById("stepLabel");
+      const progressBar = document.getElementById("progressBar");
+      const questionTitle = document.getElementById("questionTitle");
+      const optionGrid = document.getElementById("optionGrid");
+      const backButton = document.getElementById("backButton");
+      const restartButton = document.getElementById("restartButton");
+      const resultRestartButton = document.getElementById("resultRestartButton");
+      const resultTitle = document.getElementById("resultTitle");
+      const resultDescription = document.getElementById("resultDescription");
+      const resultNote = document.getElementById("resultNote");
+
+      function renderStep() {
+        const step = steps[currentStep];
+        stepLabel.textContent = `Step ${currentStep + 1}/5`;
+        progressBar.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+        questionTitle.textContent = step.title;
+        optionGrid.innerHTML = "";
+        backButton.disabled = currentStep === 0;
+
+        step.options.forEach(([key, label, value]) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "option-card";
+          if (answers[step.id] === value) {
+            button.classList.add("selected");
+          }
+          button.innerHTML = `<span class="option-key">${key}</span>${label}`;
+          button.addEventListener("click", () => {
+            answers[step.id] = value;
+            optionGrid.querySelectorAll(".option-card").forEach((item) => item.classList.remove("selected"));
+            button.classList.add("selected");
+            window.setTimeout(() => {
+              if (currentStep < steps.length - 1) {
+                currentStep += 1;
+                renderStep();
+              } else {
+                showResult();
+              }
+            }, 180);
+          });
+          optionGrid.appendChild(button);
+        });
+      }
+
+      function getRecommendation() {
+        if (answers.task === "strip-only" && answers.wireSize === "standard") {
+          return {
+            title: "Recommended: Automatic Computer Wire Stripping Machine",
+            description: "Suitable for your wire range and production target.",
+            note: "This is a practical choice for standard electronic wires from 0.5 ~ 6 mm²."
+          };
+        }
+
+        if (answers.task === "strip-cut") {
+          return {
+            title: "Recommended: Computer Wire Stripping & Cutting Machine",
+            description: "Processes both cut length and strip depth in one setup.",
+            note: "This is suitable when you need cutting length control and stripping on both ends."
+          };
+        }
+
+        if (answers.wireSize === "fine") {
+          return {
+            title: "Note: Fine wire requires precision blade setup.",
+            description: "Send us your wire sample photo for blade confirmation.",
+            note: "Very fine wire should be checked by insulation material, conductor type, blade shape, and stripping depth."
+          };
+        }
+
+        return {
+          title: "Send us your requirements directly.",
+          description: "We will recommend the right machine within 24 hours.",
+          note: "Include wire size, insulation material, stripping length, daily target, and destination country."
+        };
+      }
+
+      function showResult() {
+        const result = getRecommendation();
+        resultTitle.textContent = result.title;
+        resultDescription.textContent = result.description;
+        resultNote.textContent = result.note;
+        quizPanel.style.display = "none";
+        resultPanel.classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function restartQuiz() {
+        Object.keys(answers).forEach((key) => delete answers[key]);
+        currentStep = 0;
+        resultPanel.classList.remove("active");
+        quizPanel.style.display = "block";
+        renderStep();
+      }
+
+      backButton.addEventListener("click", () => {
+        if (currentStep > 0) {
+          currentStep -= 1;
+          renderStep();
+        }
+      });
+
+      restartButton.addEventListener("click", restartQuiz);
+      resultRestartButton.addEventListener("click", restartQuiz);
+      document.querySelectorAll('a[href^="https://wa.me/"]').forEach((link) => {
+        link.href = whatsappHref;
+      });
+
+      renderStep();
+    </script>
+  </body>
+</html>

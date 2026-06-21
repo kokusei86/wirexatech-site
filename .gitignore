@@ -1,0 +1,39 @@
+# Video binaries should be uploaded to YouTube or external storage, not Git.
+*.mp4
+video-ready/*.mp4
+video-ready/*-branded*.mp4
+video-ready/*-wirexa-v1.mp4
+video-ready/*-branded-preview.jpg
+
+# Keep lightweight WIREXA video review assets.
+!video-ready/*-wirexa-v1-preview.jpg
+!video-ready/video_build_report.md
+!video-ready/.gitkeep
+
+# Python cache from video tooling.
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local temporary files.
+*.tmp
+*.temp
+*.part
+*.log
+*.bak
+*.backup
+*.old
+~$*
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup archives and large handoff bundles.
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
