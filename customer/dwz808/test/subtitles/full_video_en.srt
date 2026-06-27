@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:00,900
+Data is set
+
+2
+00:00:01,000 --> 00:00:02,900
+Press Run
+
+3
+00:00:03,000 --> 00:00:03,900
+This is the Run button
+
+4
+00:00:04,000 --> 00:00:04,900
+And this is the Stop button
+
+5
+00:00:05,000 --> 00:00:07,900
+Press Run
+
+6
+00:00:08,000 --> 00:00:09,900
+Cut one to check
+
+7
+00:00:10,000 --> 00:00:13,900
+This cut wire
+
+8
+00:00:14,000 --> 00:00:15,900
+Has blade marks at both ends
+
+9
+00:00:16,000 --> 00:00:17,900
+But not stripped open
+
+10
+00:00:18,000 --> 00:00:18,900
+That means cutter depth is too small
+
+11
+00:00:19,000 --> 00:00:19,900
+The previous cutter depth
+
+12
+00:00:20,000 --> 00:00:23,900
+For example, I set it to 140
+
+13
+00:00:24,000 --> 00:00:25,900
+I set it to 140
+
+14
+00:00:26,000 --> 00:00:27,900
+Check 146
+
+15
+00:00:28,000 --> 00:00:33,900
+Then press Run
+
+16
+00:00:34,000 --> 00:00:35,900
+Now look at 146
+
+17
+00:00:36,000 --> 00:00:36,900
+It has stripped
+
+18
+00:00:37,000 --> 00:00:38,900
+This end is half strip
+
+19
+00:00:39,000 --> 00:00:39,900
+This end is full strip
+
+20
+00:00:40,000 --> 00:00:41,900
+Like this
+
+21
+00:00:42,000 --> 00:00:42,900
+Front is half strip
+
+22
+00:00:43,000 --> 00:00:43,900
+Rear is full strip
+
+23
+00:00:44,000 --> 00:00:47,900
+Check if any wires are broken
+
+24
+00:00:48,000 --> 00:00:48,900
+If none are broken
+
+25
+00:00:49,000 --> 00:00:52,900
+Then use this cutter depth.
+
+26
+00:00:53,000 --> 00:00:53,900
+If it breaks, reduce the blade depth.
+
+27
+00:00:54,000 --> 00:00:55,900
+For example, 146.
+
+28
+00:00:56,000 --> 00:00:57,900
+Change it to 144.
+
+29
+00:00:58,000 --> 00:00:58,900
+Or 43.
+
+30
+00:00:59,000 --> 00:01:02,000
+Like that.

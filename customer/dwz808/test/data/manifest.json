@@ -1,0 +1,15 @@
+{
+  "pack_name": "20260627_073435_skahtq0qnc",
+  "created_at": "2026-06-27T07:34:35",
+  "source_task": "DWZ-808 电脑方面设置_2026-06-27_0717",
+  "entry": "index.html",
+  "web_delivery": true,
+  "contains": {
+    "english_report": "index.html",
+    "videos": "videos/",
+    "clips": "clips/",
+    "images": "images/",
+    "subtitles": "subtitles/",
+    "skill_cards": "data/skill_cards_en.json"
+  }
+}
