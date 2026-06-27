@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-06-27T07:18:38",
+  "source": "deepseek",
+  "model": "deepseek-chat",
+  "equipment": "DWZ-808 全自动电脑剥线机",
+  "nodes": [
+    {
+      "node_id": "001",
+      "start": "00:00:00",
+      "end": "00:00:30",
+      "source_text": "[00:00:00] 我们已经调好了数据\n[00:00:01] 我按下运行\n[00:00:03] 这运行键\n[00:00:04] 然后一个停机键\n[00:00:05] 我运行按下\n[00:00:05] 然后按停机\n[00:00:08] 切一根看一下\n[00:00:10] 现在这根切出来\n[00:00:14] 两头有个刮印\n[00:00:16] 但是没有拨开\n[00:00:18] 那就是线径太小\n[00:00:19] 刚刚线径\n[00:00:20] 比如说我刚刚的线径是140\n[00:00:24] 我加到140\n[00:00:26] 146看一下\n[00:00:28] 然后再运行",
+      "review_required": true,
+      "clip": "subtitled_clips/clip_001_00-00-00_to_00-00-30.mp4",
+      "screenshot": "screenshots/00-00-00.jpg",
+      "duplicate_of": null,
+      "skill": {
+        "title": "Trial Cut - Adjust Cutter Depth",
+        "purpose": "Verify data and fine-tune cutter depth to ensure proper strip depth",
+        "when": "After entering a new program, changing wire, or during first trial cut",
+        "operations": [
+          "Press Run button to cut one piece",
+          "Check both ends of the cut wire for scoring but not stripped",
+          "Press Stop button to stop",
+          "Press Cutter Depth key and increase the value (e.g., from 140 to 146)",
+          "Press Run button again to trial cut"
+        ],
+        "success_check": "Stripped ends clean, no scratches, no un-stripped areas",
+        "common_mistakes": [
+          "Forgetting to press Stop before adjusting parameters",
+          "Increasing cutter depth too much, damaging the conductor",
+          "Adjusting too large a step and overshooting the optimal value"
+        ],
+        "key_values": [
+          "Cutter depth 140: current parameter, unit 0.01 mm",
+          "Cutter depth 146: increased parameter, deeper strip depth"
+        ],
+        "warning": "Do not increase cutter depth too much at once to avoid cutting copper strands; always stop the machine before changing parameters",
+        "tags": [
+          "trial cut",
+          "cutter depth adjustment",
+          "wire stripper"
+        ]
+      }
+    },
+    {
+      "node_id": "002",
+      "start": "00:00:00",
+      "end": "00:00:30",
+      "source_text": "[00:00:00] 我们已经调好了数据\n[00:00:01] 我按下运行\n[00:00:03] 这运行键\n[00:00:04] 然后一个停机键\n[00:00:05] 我运行按下\n[00:00:05] 然后按停机\n[00:00:08] 切一根看一下\n[00:00:10] 现在这根切出来\n[00:00:14] 两头有个刮印\n[00:00:16] 但是没有拨开\n[00:00:18] 那就是线径太小\n[00:00:19] 刚刚线径\n[00:00:20] 比如说我刚刚的线径是140\n[00:00:24] 我加到140\n[00:00:26] 146看一下\n[00:00:28] 然后再运行",
+      "review_required": true,
+      "clip": "subtitled_clips/clip_001_00-00-00_to_00-00-30.mp4",
+      "screenshot": "screenshots/00-00-11.jpg",
+      "duplicate_of": "001",
+      "skill": null
+    },
+    {
+      "node_id": "003",
+      "start": "00:00:00",
+      "end": "00:00:30",
+      "source_text": "[00:00:00] 我们已经调好了数据\n[00:00:01] 我按下运行\n[00:00:03] 这运行键\n[00:00:04] 然后一个停机键\n[00:00:05] 我运行按下\n[00:00:05] 然后按停机\n[00:00:08] 切一根看一下\n[00:00:10] 现在这根切出来\n[00:00:14] 两头有个刮印\n[00:00:16] 但是没有拨开\n[00:00:18] 那就是线径太小\n[00:00:19] 刚刚线径\n[00:00:20] 比如说我刚刚的线径是140\n[00:00:24] 我加到140\n[00:00:26] 146看一下\n[00:00:28] 然后再运行",
+      "review_required": true,
+      "clip": "subtitled_clips/clip_001_00-00-00_to_00-00-30.mp4",
+      "screenshot": "screenshots/00-00-20.jpg",
+      "duplicate_of": "001",
+      "skill": null
+    },
+    {
+      "node_id": "004",
+      "start": "00:00:00",
+      "end": "00:00:30",
+      "source_text": "[00:00:00] 我们已经调好了数据\n[00:00:01] 我按下运行\n[00:00:03] 这运行键\n[00:00:04] 然后一个停机键\n[00:00:05] 我运行按下\n[00:00:05] 然后按停机\n[00:00:08] 切一根看一下\n[00:00:10] 现在这根切出来\n[00:00:14] 两头有个刮印\n[00:00:16] 但是没有拨开\n[00:00:18] 那就是线径太小\n[00:00:19] 刚刚线径\n[00:00:20] 比如说我刚刚的线径是140\n[00:00:24] 我加到140\n[00:00:26] 146看一下\n[00:00:28] 然后再运行",
+      "review_required": true,
+      "clip": "subtitled_clips/clip_001_00-00-00_to_00-00-30.mp4",
+      "screenshot": "screenshots/00-00-29.jpg",
+      "duplicate_of": "001",
+      "skill": null
+    },
+    {
+      "node_id": "005",
+      "start": "00:00:30",
+      "end": "00:01:00",
+      "source_text": "[00:00:34] 然后你看一下这146\n[00:00:36] 它已经拨开了\n[00:00:37] 这头是半拨\n[00:00:39] 这头是全拨\n[00:00:40] 是这样子\n[00:00:42] 头是半拨\n[00:00:43] 尾是全拨\n[00:00:44] 然后你观察一下里面同时有没有断\n[00:00:48] 如果同时没断\n[00:00:49] 那就按这个线径就可以了\n[00:00:53] 如果断了同时线径就要减小\n[00:00:54] 比如146\n[00:00:56] 我们再改成144\n[00:00:58] 或者43\n[00:00:59] 这样子",
+      "review_required": true,
+      "clip": "subtitled_clips/clip_002_00-00-30_to_00-01-00.mp4",
+      "screenshot": "screenshots/00-00-34.jpg",
+      "duplicate_of": null,
+      "skill": {
+        "title": "Adjust Cutter Depth to Prevent Core Breakage",
+        "purpose": "Adjust the cutter depth value to prevent cutting internal copper wires during stripping.",
+        "when": "When copper wires are found broken at the front strip after stripping.",
+        "operations": [
+          "Observe the stripped cable.",
+          "Check copper wire condition on both half-strip and full-strip ends.",
+          "Press the cutter depth key to access the parameter.",
+          "Decrease the current cutter depth value.",
+          "Press the confirm key to save the new value."
+        ],
+        "success_check": "After stripping again, no copper wires are broken, and the insulation is cut cleanly.",
+        "common_mistakes": [
+          "Adjusted only one side and forgot the other.",
+          "Pressed a key but did not press confirm to save.",
+          "Increased the value too much, causing more breakage."
+        ],
+        "key_values": [
+          "Initial cutter depth: 146 (current setting)",
+          "Adjusted cutter depth: 144 or 143 (suitable value without breaking copper wires)"
+        ],
+        "warning": "Always press confirm after each adjustment, otherwise the parameter will not take effect and wire breakage may occur immediately.",
+        "tags": [
+          "Wire stripper",
+          "Cutter depth adjustment",
+          "Core breakage prevention"
+        ]
+      }
+    }
+  ],
+  "language": "en",
+  "translated_from": "skill_cards.json",
+  "translated_at": "2026-06-27T07:23:51",
+  "translation_engine": "deepseek"
+}

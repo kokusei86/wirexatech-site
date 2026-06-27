@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DWZ-808 Operation Training Manual</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f2f4f7;
+      --card: #ffffff;
+      --ink: #17202a;
+      --muted: #667085;
+      --line: #d0d7de;
+      --accent: #126e82;
+      --accent-dark: #0b5361;
+      --soft: #f7f9fb;
+      --paper: #fffdf7;
+      --ok: #18794e;
+      --warn: #a15c00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+    .page { width: min(1100px, calc(100% - 28px)); margin: 0 auto; padding: 22px 0 42px; }
+    .cover, .section, .timeline-content {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+    }
+    .section { margin-top: 14px; box-shadow: none; }
+    .timeline-content { background: var(--paper); box-shadow: none; }
+    h1, h2, h3, h4 { line-height: 1.25; margin: 0; letter-spacing: 0; }
+    h1 { font-size: clamp(28px, 4.5vw, 46px); margin-bottom: 8px; }
+    h2 { font-size: 24px; margin-bottom: 12px; }
+    h3 { font-size: 21px; }
+    h4 { font-size: 16px; margin-bottom: 8px; }
+    .subtitle { color: var(--accent-dark); font-weight: 700; margin: 0 0 14px; }
+    .cover-note, .muted { color: var(--muted); }
+    .overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .status-card { min-height: 76px; padding: 14px; border-radius: 8px; background: var(--soft); border: 1px solid var(--line); }
+    .status-card span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+    .status-card strong { display: block; font-size: 20px; color: var(--ok); }
+    .equipment-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 18px; margin: 12px 0 0; }
+    .equipment-list div { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+    .equipment-list dt { color: var(--muted); font-size: 13px; }
+    .equipment-list dd { margin: 4px 0 0; font-weight: 700; word-break: break-word; }
+    video { width: 100%; border-radius: 8px; background: #111827; display: block; }
+    .speed-control { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+    .speed-control span { color: var(--muted); font-size: 13px; }
+    .speed-control button { min-width: 48px; border: 1px solid var(--line); background: #fff; border-radius: 6px; padding: 5px 8px; cursor: pointer; }
+    .speed-control button.active { border-color: var(--accent); background: #dff3f6; color: var(--accent-dark); font-weight: 700; }
+    .timeline { margin-top: 12px; }
+    .timeline-item { margin: 0 0 20px; page-break-inside: avoid; }
+    .step-heading { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
+    .step-number { background: var(--accent); color: #fff; border-radius: 999px; padding: 5px 10px; font-weight: 800; }
+    .step-time { color: var(--muted); margin-left: auto; font-weight: 700; }
+    .media-grid { display: grid; grid-template-columns: minmax(260px, 0.95fr) minmax(320px, 1.05fr); gap: 16px; align-items: start; margin-top: 14px; }
+    .screenshot-button { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
+    .screenshot-button img { width: 100%; display: block; border-radius: 8px; border: 1px solid var(--line); background: #111827; }
+    .clip-meta { margin-top: 8px; color: var(--muted); font-size: 13px; word-break: break-all; }
+    .image-warning { margin-top: 8px; padding: 8px 10px; border-radius: 6px; border: 1px solid #ffd08a; background: #fff8e6; color: #8a4b00; font-size: 13px; font-weight: 700; }
+    .skill-card, .clip-empty, .empty-card, .transcript-details { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 14px; }
+    .training-card { border-left: 5px solid var(--accent); box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06); }
+    .same-card { background: #f8fafc; }
+    .transcript-details { margin-top: 14px; background: var(--soft); }
+    .transcript-details summary, .appendix details summary { cursor: pointer; font-weight: 800; color: var(--accent-dark); }
+    .transcript-details p, .transcript-full, .appendix pre { font-family: Consolas, "SFMono-Regular", monospace; font-size: 14px; line-height: 1.75; white-space: pre-wrap; word-break: break-word; }
+    .skill-field { display: grid; gap: 4px; margin-top: 8px; }
+    .skill-field strong { color: var(--accent-dark); }
+    .skill-field ol, .skill-field ul { margin: 2px 0 0 20px; padding: 0; }
+    .hero-field span { font-size: 20px; font-weight: 800; }
+    .success-field { border-left: 4px solid #18794e; background: #eefbf4; padding: 10px; border-radius: 6px; }
+    .mistake-field { border-left: 4px solid #c2410c; background: #fff4ed; padding: 10px; border-radius: 6px; }
+    .warning-field { border-left: 4px solid #a15c00; background: #fff8e6; padding: 10px; border-radius: 6px; }
+    .lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(17, 24, 39, 0.82); z-index: 50; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: min(96vw, 1200px); max-height: 90vh; border-radius: 8px; background: #000; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); }
+    .lightbox-title { position: fixed; left: 20px; top: 16px; color: #fff; font-weight: 700; }
+    .lightbox-nav, .lightbox-close { position: fixed; border: 1px solid rgba(255, 255, 255, 0.45); background: rgba(255, 255, 255, 0.12); color: #fff; border-radius: 999px; padding: 8px 12px; cursor: pointer; font-weight: 800; }
+    .lightbox-prev { left: 18px; top: 50%; }
+    .lightbox-next { right: 18px; top: 50%; }
+    .lightbox-close { right: 18px; top: 16px; }
+    @media (max-width: 820px) {
+      .page { width: min(100% - 18px, 1100px); padding-top: 10px; }
+      .cover, .section, .timeline-content { padding: 13px; }
+      .section { margin-top: 10px; }
+      .timeline-item { margin-bottom: 12px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 21px; }
+      h3 { font-size: 18px; }
+      .overview, .media-grid, .equipment-list { grid-template-columns: 1fr; }
+      .step-time { margin-left: 0; }
+      .media-grid { gap: 12px; }
+    }
+    @page { size: A4; margin: 14mm; }
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; padding: 0; }
+      .lightbox, .speed-control { display: none !important; }
+      .cover, .section, .timeline-content { box-shadow: none; border-color: #bbb; }
+      .section, .timeline-item { page-break-inside: avoid; break-inside: avoid; }
+      details:not([open]) > :not(summary) { display: block; }
+      video { max-height: 180px; }
+    }
+  </style>
+  <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+  <main class="page">
+    <header class="cover">
+      <h1>DWZ-808 Operation Training Manual</h1>
+      <p class="subtitle">Customer Delivery Edition</p>
+      <p class="cover-note">A practical training guide for customer operation, after-sales support, and distributor onboarding.</p>
+      <div class="overview"><div class="status-card ok"><span>Equipment</span><strong>DWZ-808</strong></div>
+<div class="status-card ok"><span>Video Length</span><strong>01:02</strong></div>
+<div class="status-card ok"><span>Steps</span><strong>2</strong></div></div>
+    </header>
+
+    <section class="section">
+      <h2>1. Training Objective</h2>
+      <p>Learn the basic DWZ-808 operation flow, including program selection, parameter entry, stripping length, cutter depth, blade retract, and speed adjustment.</p>
+      <p class="muted">Recommended use: watch the full subtitled video first, then follow each training step while checking the operation images and short videos.</p>
+    </section>
+
+    <section class="section">
+      <h2>2. Applicable Equipment</h2>
+      <dl class="equipment-list">
+        <div><dt>Equipment</dt><dd>DWZ-808 Automatic Wire Stripping Machine</dd></div>
+        <div><dt>Training Scope</dt><dd>Basic operation and parameter adjustment</dd></div>
+      </dl>
+    </section>
+
+    <section class="section">
+      <h2>3. Full Video with English Subtitles</h2>
+      <div class="video-panel full-video"><video controls preload="metadata" src="videos/full_video_en.mp4"></video><div class="speed-control"><span>Playback speed</span><button type="button" data-speed="0.5">0.5</button><button type="button" data-speed="1">1.0</button><button type="button" data-speed="1.5">1.5</button><button type="button" data-speed="2">2.0</button></div></div>
+    </section>
+
+    <section class="section">
+      <h2>4. Training Steps</h2>
+      <p class="muted">Each step includes a training card, operation image, and corresponding English subtitled video segment.</p>
+      <div class="timeline"><article class="timeline-item"><div class="timeline-content"><div class="step-heading"><span class="step-number">Step 1</span><h3>Trial Cut - Adjust Cutter Depth</h3><span class="step-time">00:00:00</span></div><section class="skill-card training-card"><h4>Training Card</h4><div class="skill-field hero-field"><strong>Step Name</strong><span>Trial Cut - Adjust Cutter Depth</span></div><div class="skill-field"><strong>Why do this?</strong><span>Verify data and fine-tune cutter depth to ensure proper strip depth</span></div><div class="skill-field"><strong>When is this needed?</strong><span>After entering a new program, changing wire, or during first trial cut</span></div><div class="skill-field"><strong>Operation Steps</strong><ol><li>Press Run button to cut one piece</li><li>Check both ends of the cut wire for scoring but not stripped</li><li>Press Stop button to stop</li><li>Press Cutter Depth key and increase the value (e.g., from 140 to 146)</li><li>Press Run button again to trial cut</li></ol></div><div class="skill-field success-field"><strong>Success Check</strong><span>Stripped ends clean, no scratches, no un-stripped areas</span></div><div class="skill-field mistake-field"><strong>Common Mistakes</strong><ul><li>Forgetting to press Stop before adjusting parameters</li><li>Increasing cutter depth too much, damaging the conductor</li><li>Adjusting too large a step and overshooting the optimal value</li></ul></div><div class="skill-field"><strong>Key Values</strong><ul><li>Cutter depth 140: current parameter, unit 0.01 mm</li><li>Cutter depth 146: increased parameter, deeper strip depth</li></ul></div><div class="skill-field warning-field"><strong>Warnings</strong><span>Do not increase cutter depth too much at once to avoid cutting copper strands; always stop the machine before changing parameters</span></div><div class="skill-field"><strong>Tags</strong><span>trial cut / cutter depth adjustment / wire stripper</span></div></section><div class="media-grid"><div class="shot-panel"><h4>Operation Image</h4><button class="screenshot-button" type="button" data-full="images/00-00-00.jpg" data-title="00:00:00"><img src="images/00-00-00.jpg" alt="Operation image 00:00:00"></button></div><div class="video-panel"><h4>Training Video</h4><div class="clip-box"><div class="clip-meta">Video segment: 00:00:00 - 00:00:30</div><video controls preload="metadata" src="clips/clip_001_00-00-00_to_00-00-30.mp4"></video><div class="speed-control"><span>Playback speed</span><button type="button" data-speed="0.5">0.5</button><button type="button" data-speed="1">1.0</button><button type="button" data-speed="1.5">1.5</button><button type="button" data-speed="2">2.0</button></div></div></div></div></div></article>
+<article class="timeline-item"><div class="timeline-content"><div class="step-heading"><span class="step-number">Step 2</span><h3>Adjust Cutter Depth to Prevent Core Breakage</h3><span class="step-time">00:00:34</span></div><section class="skill-card training-card"><h4>Training Card</h4><div class="skill-field hero-field"><strong>Step Name</strong><span>Adjust Cutter Depth to Prevent Core Breakage</span></div><div class="skill-field"><strong>Why do this?</strong><span>Adjust the cutter depth value to prevent cutting internal copper wires during stripping.</span></div><div class="skill-field"><strong>When is this needed?</strong><span>When copper wires are found broken at the front strip after stripping.</span></div><div class="skill-field"><strong>Operation Steps</strong><ol><li>Observe the stripped cable.</li><li>Check copper wire condition on both half-strip and full-strip ends.</li><li>Press the cutter depth key to access the parameter.</li><li>Decrease the current cutter depth value.</li><li>Press the confirm key to save the new value.</li></ol></div><div class="skill-field success-field"><strong>Success Check</strong><span>After stripping again, no copper wires are broken, and the insulation is cut cleanly.</span></div><div class="skill-field mistake-field"><strong>Common Mistakes</strong><ul><li>Adjusted only one side and forgot the other.</li><li>Pressed a key but did not press confirm to save.</li><li>Increased the value too much, causing more breakage.</li></ul></div><div class="skill-field"><strong>Key Values</strong><ul><li>Initial cutter depth: 146 (current setting)</li><li>Adjusted cutter depth: 144 or 143 (suitable value without breaking copper wires)</li></ul></div><div class="skill-field warning-field"><strong>Warnings</strong><span>Always press confirm after each adjustment, otherwise the parameter will not take effect and wire breakage may occur immediately.</span></div><div class="skill-field"><strong>Tags</strong><span>Wire stripper / Cutter depth adjustment / Core breakage prevention</span></div></section><div class="media-grid"><div class="shot-panel"><h4>Operation Image</h4><button class="screenshot-button" type="button" data-full="images/00-00-34.jpg" data-title="00:00:34"><img src="images/00-00-34.jpg" alt="Operation image 00:00:34"></button></div><div class="video-panel"><h4>Training Video</h4><div class="clip-box"><div class="clip-meta">Video segment: 00:00:30 - 00:01:00</div><video controls preload="metadata" src="clips/clip_002_00-00-30_to_00-01-00.mp4"></video><div class="speed-control"><span>Playback speed</span><button type="button" data-speed="0.5">0.5</button><button type="button" data-speed="1">1.0</button><button type="button" data-speed="1.5">1.5</button><button type="button" data-speed="2">2.0</button></div></div></div></div></div></article></div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-title" id="lightbox-title"></div>
+    <button class="lightbox-close" id="lightbox-close" type="button">Close</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button">Previous</button>
+    <img id="lightbox-image" alt="Expanded operation image">
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button">Next</button>
+  </div>
+
+  <script>
+    (function () {
+      var lightbox = document.getElementById("lightbox");
+      var image = document.getElementById("lightbox-image");
+      var title = document.getElementById("lightbox-title");
+      var closeButton = document.getElementById("lightbox-close");
+      var previousButton = document.getElementById("lightbox-prev");
+      var nextButton = document.getElementById("lightbox-next");
+      var screenshotButtons = Array.prototype.slice.call(document.querySelectorAll(".screenshot-button"));
+      var currentIndex = -1;
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        image.removeAttribute("src");
+      }
+
+      function showImage(index) {
+        if (!screenshotButtons.length) {
+          return;
+        }
+        currentIndex = (index + screenshotButtons.length) % screenshotButtons.length;
+        var button = screenshotButtons[currentIndex];
+        image.src = button.getAttribute("data-full");
+        title.textContent = button.getAttribute("data-title") || "";
+      }
+
+      screenshotButtons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+          showImage(index);
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+      closeButton.addEventListener("click", closeLightbox);
+      previousButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        showImage(currentIndex - 1);
+      });
+      nextButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        showImage(currentIndex + 1);
+      });
+      document.addEventListener("keydown", function (event) {
+        if (!lightbox.classList.contains("open")) {
+          return;
+        }
+        if (event.key === "Escape") {
+          closeLightbox();
+        } else if (event.key === "ArrowLeft") {
+          showImage(currentIndex - 1);
+        } else if (event.key === "ArrowRight") {
+          showImage(currentIndex + 1);
+        }
+      });
+
+      document.querySelectorAll(".speed-control").forEach(function (control) {
+        var wrapper = control.closest(".video-panel, .clip-box");
+        var video = wrapper ? wrapper.querySelector("video") : null;
+        if (!video) {
+          return;
+        }
+        control.querySelectorAll("button").forEach(function (button) {
+          if (button.getAttribute("data-speed") === "1") {
+            button.classList.add("active");
+          }
+          button.addEventListener("click", function () {
+            var speed = parseFloat(button.getAttribute("data-speed"));
+            if (!Number.isNaN(speed)) {
+              video.playbackRate = speed;
+            }
+            control.querySelectorAll("button").forEach(function (item) {
+              item.classList.remove("active");
+            });
+            button.classList.add("active");
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
