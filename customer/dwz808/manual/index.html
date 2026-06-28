@@ -1,23 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DWZ-808 Operation Training Manual</title>
+  <meta name="robots" content="noindex,nofollow">
+  <title>DWZ-808 学习中心</title>
   <style>
     :root {
-      color-scheme: light;
-      --bg: #f2f4f7;
-      --card: #ffffff;
+      --bg: #f6f7f9;
+      --paper: #ffffff;
       --ink: #17202a;
-      --muted: #667085;
-      --line: #d0d7de;
-      --accent: #126e82;
-      --accent-dark: #0b5361;
-      --soft: #f7f9fb;
-      --paper: #fffdf7;
-      --ok: #18794e;
-      --warn: #a15c00;
+      --muted: #657282;
+      --line: #d8dee8;
+      --accent: #0f766e;
+      --accent-soft: #e6f5f2;
     }
     * { box-sizing: border-box; }
     body {
@@ -25,225 +21,540 @@
       background: var(--bg);
       color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
+      line-height: 1.58;
     }
-    .page { width: min(1100px, calc(100% - 28px)); margin: 0 auto; padding: 22px 0 42px; }
-    .cover, .section, .timeline-content {
-      background: var(--card);
+    main {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+    header {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 6vw, 52px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 26px;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    h4 {
+      margin: 16px 0 8px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .edition {
+      display: inline-block;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fbfcfd;
+    }
+    .stat strong {
+      display: block;
+      font-size: 24px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+    nav a {
+      color: var(--accent);
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 7px 12px;
+      text-decoration: none;
+      font-weight: 650;
+    }
+    .panel, .section {
+      background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 8px;
       padding: 20px;
-      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+      margin: 16px 0;
     }
-    .section { margin-top: 14px; box-shadow: none; }
-    .timeline-content { background: var(--paper); box-shadow: none; }
-    h1, h2, h3, h4 { line-height: 1.25; margin: 0; letter-spacing: 0; }
-    h1 { font-size: clamp(28px, 4.5vw, 46px); margin-bottom: 8px; }
-    h2 { font-size: 24px; margin-bottom: 12px; }
-    h3 { font-size: 21px; }
-    h4 { font-size: 16px; margin-bottom: 8px; }
-    .subtitle { color: var(--accent-dark); font-weight: 700; margin: 0 0 14px; }
-    .cover-note, .muted { color: var(--muted); }
-    .overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-    .status-card { min-height: 76px; padding: 14px; border-radius: 8px; background: var(--soft); border: 1px solid var(--line); }
-    .status-card span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 4px; }
-    .status-card strong { display: block; font-size: 20px; color: var(--ok); }
-    .equipment-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 18px; margin: 12px 0 0; }
-    .equipment-list div { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
-    .equipment-list dt { color: var(--muted); font-size: 13px; }
-    .equipment-list dd { margin: 4px 0 0; font-weight: 700; word-break: break-word; }
-    video { width: 100%; border-radius: 8px; background: #111827; display: block; }
-    .speed-control { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
-    .speed-control span { color: var(--muted); font-size: 13px; }
-    .speed-control button { min-width: 48px; border: 1px solid var(--line); background: #fff; border-radius: 6px; padding: 5px 8px; cursor: pointer; }
-    .speed-control button.active { border-color: var(--accent); background: #dff3f6; color: var(--accent-dark); font-weight: 700; }
-    .timeline { margin-top: 12px; }
-    .timeline-item { margin: 0 0 20px; page-break-inside: avoid; }
-    .step-heading { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
-    .step-number { background: var(--accent); color: #fff; border-radius: 999px; padding: 5px 10px; font-weight: 800; }
-    .step-time { color: var(--muted); margin-left: auto; font-weight: 700; }
-    .media-grid { display: grid; grid-template-columns: minmax(260px, 0.95fr) minmax(320px, 1.05fr); gap: 16px; align-items: start; margin-top: 14px; }
-    .screenshot-button { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
-    .screenshot-button img { width: 100%; display: block; border-radius: 8px; border: 1px solid var(--line); background: #111827; }
-    .clip-meta { margin-top: 8px; color: var(--muted); font-size: 13px; word-break: break-all; }
-    .image-warning { margin-top: 8px; padding: 8px 10px; border-radius: 6px; border: 1px solid #ffd08a; background: #fff8e6; color: #8a4b00; font-size: 13px; font-weight: 700; }
-    .skill-card, .clip-empty, .empty-card, .transcript-details { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 14px; }
-    .training-card { border-left: 5px solid var(--accent); box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06); }
-    .same-card { background: #f8fafc; }
-    .transcript-details { margin-top: 14px; background: var(--soft); }
-    .transcript-details summary, .appendix details summary { cursor: pointer; font-weight: 800; color: var(--accent-dark); }
-    .transcript-details p, .transcript-full, .appendix pre { font-family: Consolas, "SFMono-Regular", monospace; font-size: 14px; line-height: 1.75; white-space: pre-wrap; word-break: break-word; }
-    .skill-field { display: grid; gap: 4px; margin-top: 8px; }
-    .skill-field strong { color: var(--accent-dark); }
-    .skill-field ol, .skill-field ul { margin: 2px 0 0 20px; padding: 0; }
-    .hero-field span { font-size: 20px; font-weight: 800; }
-    .success-field { border-left: 4px solid #18794e; background: #eefbf4; padding: 10px; border-radius: 6px; }
-    .mistake-field { border-left: 4px solid #c2410c; background: #fff4ed; padding: 10px; border-radius: 6px; }
-    .warning-field { border-left: 4px solid #a15c00; background: #fff8e6; padding: 10px; border-radius: 6px; }
-    .lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(17, 24, 39, 0.82); z-index: 50; }
-    .lightbox.open { display: flex; }
-    .lightbox img { max-width: min(96vw, 1200px); max-height: 90vh; border-radius: 8px; background: #000; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); }
-    .lightbox-title { position: fixed; left: 20px; top: 16px; color: #fff; font-weight: 700; }
-    .lightbox-nav, .lightbox-close { position: fixed; border: 1px solid rgba(255, 255, 255, 0.45); background: rgba(255, 255, 255, 0.12); color: #fff; border-radius: 999px; padding: 8px 12px; cursor: pointer; font-weight: 800; }
-    .lightbox-prev { left: 18px; top: 50%; }
-    .lightbox-next { right: 18px; top: 50%; }
-    .lightbox-close { right: 18px; top: 16px; }
+    video, img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 6px;
+      background: #111;
+    }
+    .skill-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      padding: 20px 0;
+    }
+    .skill-card:first-of-type { border-top: 0; padding-top: 0; }
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .summary {
+      color: var(--muted);
+      margin-top: 0;
+    }
+    .field {
+      margin: 14px 0;
+    }
+    .field strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+    .field p {
+      margin: 0;
+    }
+    ol, ul {
+      margin: 6px 0 0;
+      padding-left: 22px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+    .tags span {
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 650;
+    }
+    .placeholder, .empty {
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      color: var(--muted);
+      background: #fbfcfd;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 24px;
+    }
     @media (max-width: 820px) {
-      .page { width: min(100% - 18px, 1100px); padding-top: 10px; }
-      .cover, .section, .timeline-content { padding: 13px; }
-      .section { margin-top: 10px; }
-      .timeline-item { margin-bottom: 12px; }
-      h1 { font-size: 28px; }
-      h2 { font-size: 21px; }
-      h3 { font-size: 18px; }
-      .overview, .media-grid, .equipment-list { grid-template-columns: 1fr; }
-      .step-time { margin-left: 0; }
-      .media-grid { gap: 12px; }
-    }
-    @page { size: A4; margin: 14mm; }
-    @media print {
-      body { background: #fff; }
-      .page { width: 100%; padding: 0; }
-      .lightbox, .speed-control { display: none !important; }
-      .cover, .section, .timeline-content { box-shadow: none; border-color: #bbb; }
-      .section, .timeline-item { page-break-inside: avoid; break-inside: avoid; }
-      details:not([open]) > :not(summary) { display: block; }
-      video { max-height: 180px; }
+      main { padding: 16px 10px 32px; }
+      header, .panel, .section { padding: 16px; }
+      .stats { grid-template-columns: 1fr; }
+      .skill-card { grid-template-columns: 1fr; gap: 12px; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 22px; }
+      h3 { font-size: 19px; }
     }
   </style>
-  <meta name="robots" content="noindex,nofollow">
 </head>
 <body>
-  <main class="page">
-    <header class="cover">
-      <h1>DWZ-808 Operation Training Manual</h1>
-      <p class="subtitle">Customer Delivery Edition</p>
-      <p class="cover-note">A practical training guide for customer operation, after-sales support, and distributor onboarding.</p>
-      <div class="overview"><div class="status-card ok"><span>Equipment</span><strong>DWZ-808</strong></div>
-<div class="status-card ok"><span>Video Length</span><strong>01:02</strong></div>
-<div class="status-card ok"><span>Steps</span><strong>2</strong></div></div>
-    </header>
+<main>
+  <header>
+    <span class="edition">中文教程版</span>
+    <h1>DWZ-808 学习中心</h1>
+    <p class="subtitle">电脑剥线机操作教程</p>
+    <div class="stats">
+      <div class="stat"><span>教程数量</span><strong>14</strong></div>
+      <div class="stat"><span>栏目数量</span><strong>8</strong></div>
+      <div class="stat"><span>有视频片段</span><strong>10</strong></div>
+    </div>
+  </header>
 
-    <section class="section">
-      <h2>1. Training Objective</h2>
-      <p>Learn the basic DWZ-808 operation flow, including program selection, parameter entry, stripping length, cutter depth, blade retract, and speed adjustment.</p>
-      <p class="muted">Recommended use: watch the full subtitled video first, then follow each training step while checking the operation images and short videos.</p>
-    </section>
+  <nav aria-label="教程栏目"><a href="#quick_start">快速上手</a><a href="#parameter_setup">参数设置</a><a href="#operation">基础操作</a><a href="#trial">试切调机</a><a href="#alarm_center">报警处理</a><a href="#maintenance">维护保养</a><a href="#faq">常见问题</a><a href="#download">下载资料</a></nav>
 
-    <section class="section">
-      <h2>2. Applicable Equipment</h2>
-      <dl class="equipment-list">
-        <div><dt>Equipment</dt><dd>DWZ-808 Automatic Wire Stripping Machine</dd></div>
-        <div><dt>Training Scope</dt><dd>Basic operation and parameter adjustment</dd></div>
-      </dl>
-    </section>
+  <section class="panel">
+    <h2>完整中文带字幕视频</h2>
+    <video controls preload="metadata" src="assets/videos/dwz808_length_setting_20260627_0651_475bc2.mp4"><track src="assets/subtitles/dwz808_length_setting_20260627_0651_475bc2_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+  </section>
 
-    <section class="section">
-      <h2>3. Full Video with English Subtitles</h2>
-      <div class="video-panel full-video"><video controls preload="metadata" src="videos/full_video_en.mp4"></video><div class="speed-control"><span>Playback speed</span><button type="button" data-speed="0.5">0.5</button><button type="button" data-speed="1">1.0</button><button type="button" data-speed="1.5">1.5</button><button type="button" data-speed="2">2.0</button></div></div>
-    </section>
+  
+            <section class="section" id="quick_start">
+              <h2>快速上手</h2>
+              
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>设置剥皮参数</h3>
+        <p class="summary">设定线头剥皮长度和剥皮方式</p>
+        <div class="field"><strong>为什么要做？</strong><p>设定线头剥皮长度和剥皮方式</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p></p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按线头剥皮键</li><li>输入5表示5毫米</li><li>按确认键</li><li>按剥皮方式键</li><li>选择全拨或半拨</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p></p></div>
+        <div class="field"><strong>常见错误</strong></div>
+        <div class="field"><strong>关键参数</strong><ul><li>线头剥皮长度：5毫米，决定前端去皮长度</li><li>剥皮方式：全拨或半拨，控制剥皮后皮是否完全去掉</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>半拨时需确认参数正确，避免剥皮不完整</p></div>
+        <div class="tags"><span>剥线机</span><span>参数设置</span><span>剥皮</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <div class="placeholder">素材待补充</div>
+        <h4>教学片段</h4>
+        <div class="placeholder">素材待补充</div>
+      </div>
+    </article>
+    
+            </section>
+            
+            <section class="section" id="parameter_setup">
+              <h2>参数设置</h2>
+              
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>剥线参数设定</h3>
+        <p class="summary">设置线材两端剥皮长度和剥皮方式，确保剥皮尺寸准确</p>
+        <div class="field"><strong>为什么要做？</strong><p>设置线材两端剥皮长度和剥皮方式，确保剥皮尺寸准确</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>更换线材型号或调整剥皮长度要求时</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按头拨键输入前端剥皮毫米数</li><li>按尾拨键输入后端剥皮毫米数</li><li>选择剥皮模式：全拨或半拨</li><li>按定量键查看当前剥皮数量</li><li>确认定量数值正确后按退出</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>屏幕显示设定的头拨、尾拨数值，定量数值与预期一致</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>忘记区分头拨和尾拨设置</li><li>半拨模式选择错误导致剥皮不完整</li><li>定量输入后没按确认保存</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>头拨:5毫米，表示前端剥皮长度</li><li>尾拨:5毫米，表示后端剥皮长度</li><li>半拨:表示剥皮后皮不完全脱离</li><li>定量:剥皮数量，默认为5个0即无限</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>半拨模式下剥皮位置不准，需先确认线头定位</p></div>
+        <div class="tags"><span>剥线机</span><span>参数设置</span><span>剥皮长度</span><span>半拨</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_length_setting_20260627_0651_475bc2.jpg" alt="剥线参数设定">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_length_setting_20260627_0651_475bc2.mp4"><track src="assets/subtitles/dwz808_length_setting_20260627_0651_475bc2_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>设置线径参数</h3>
+        <p class="summary">调整刀片切入深度，确保剥皮不伤线芯</p>
+        <div class="field"><strong>为什么要做？</strong><p>调整刀片切入深度，确保剥皮不伤线芯</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>换线材时或试切后发现剥皮不良</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>选中线径参数栏</li><li>输入目标数值（如140）</li><li>按确认键保存</li><li>按小数点键退刀</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>屏幕线径数值变为设定值，刀片自动退回</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>忘记按确认导致参数未保存</li><li>线径过大切断线芯</li><li>线径过小剥皮不净</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>线径：刀切入深度，通常0.75平方线设140左右</li><li>长量：当前已加工数量</li><li>设定计数：目标加工数（如100），到数停机</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>线径值需根据线材软硬试切调整，过大易伤线芯</p></div>
+        <div class="tags"><span>剥线机</span><span>参数调整</span><span>线径</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_wire_diameter_depth_20260627_0651_97f670.jpg" alt="设置线径参数">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_wire_diameter_depth_20260627_0651_97f670.mp4"><track src="assets/subtitles/dwz808_wire_diameter_depth_20260627_0651_97f670_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>设置裁线数量与线径</h3>
+        <p class="summary">设定裁切段数和刀口深度</p>
+        <div class="field"><strong>为什么要做？</strong><p>设定裁切段数和刀口深度</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p></p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>输入目标数量如100</li><li>按确认键启动计数</li><li>输入线径值如140</li><li>按线径键确认</li><li>按小数点可退刀</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p></p></div>
+        <div class="field"><strong>常见错误</strong></div>
+        <div class="field"><strong>关键参数</strong><ul><li>数量：100，表示裁切100根后停机</li><li>长量：当前已裁切数，初始为0</li><li>线径：刀口切入深度，通常设120-160</li><li>当前线径：140，适配0.75平方线</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>线径过大可能切伤芯线，过小可能剥皮不净，需试切调整</p></div>
+        <div class="tags"><span>数量设定</span><span>线径调整</span><span>剥线机</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <div class="placeholder">素材待补充</div>
+        <h4>教学片段</h4>
+        <div class="placeholder">素材待补充</div>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>试切调线径</h3>
+        <p class="summary">确认剥线效果并调整刀深参数，确保线皮能完全剥开且不伤芯线。</p>
+        <div class="field"><strong>为什么要做？</strong><p>确认剥线效果并调整刀深参数，确保线皮能完全剥开且不伤芯线。</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>首次调好数据后或更换线材、剥线效果不佳（如只刮印未剥开）时。</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按【运行】键让机器切一根</li><li>查看切出的线：两端有刮印但未剥开</li><li>按【线径】键进入参数</li><li>输入比原值大的数值（如原140调为146）</li><li>再次按【运行】键试切检查</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>切出的线两端线皮完整剥开，且芯线无损伤。</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>忘记按运行就直接看结果</li><li>只改一个数值但不连续试切验证</li><li>数值改得过大导致切断芯线</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>线径：140，初始设定的刀口切入深度（单位通常为0.01mm）</li><li>线径：146，调整后的刀口切入深度（增加0.06mm）</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>线径参数每次调整幅度不宜过大，建议每次增加1-6单位，防止一次性切太深损伤芯线。</p></div>
+        <div class="tags"><span>剥线机</span><span>调机</span><span>试切</span><span>线径调整</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_wire_diameter_depth_20260627_0509_a89c92.jpg" alt="试切调线径">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_wire_diameter_depth_20260627_0509_a89c92.mp4"><track src="assets/subtitles/dwz808_wire_diameter_depth_20260627_0509_a89c92_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>试切调线径</h3>
+        <p class="summary">验证数据并微调线径参数，确保剥皮深度合适</p>
+        <div class="field"><strong>为什么要做？</strong><p>验证数据并微调线径参数，确保剥皮深度合适</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>新程序输入后、换线材后或第一次试切时</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按运行键切一根</li><li>检查切出线材两头有无刮印但未剥开</li><li>按停机键停止</li><li>按线径键，将线径值调大（如从140调至146）</li><li>再按运行键试切</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>切出的线材两端剥皮干净、无刮痕、无未剥开现象</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>忘记按停机后再调参数</li><li>线径调得过大导致伤线芯</li><li>一次调太多跳过最佳值</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>线径140：当前线径参数，单位为0.01毫米</li><li>线径146：调大后的线径参数，增加剥皮深度</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>线径不宜一次调太多，容易切伤铜丝；必须先停机再改参数</p></div>
+        <div class="tags"><span>试切</span><span>线径调整</span><span>剥线机</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_wire_diameter_depth_20260627_0717_a89c92.jpg" alt="试切调线径">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_wire_diameter_depth_20260627_0717_a89c92.mp4"><track src="assets/subtitles/dwz808_wire_diameter_depth_20260627_0717_a89c92_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>调整线径</h3>
+        <p class="summary">防止铜丝被切断，确保剥皮质量</p>
+        <div class="field"><strong>为什么要做？</strong><p>防止铜丝被切断，确保剥皮质量</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>观察剥皮后的线头，发现铜丝有断丝时</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>观察剥皮后的线头铜丝状态</li><li>若铜丝未断，按当前线径值确认</li><li>若铜丝断了，按减小键调低线径</li><li>例如当前146调至144或143</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>剥皮后线头铜丝完整无断丝</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>未观察铜丝直接调参数</li><li>调得过小导致剥皮不净</li><li>未按确认保存修改</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>146：当前线径数值，表示刀口切入深度</li><li>144或143：减小后的线径数值，用于避免切断铜丝</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>线径改小过多可能剥皮不干净，需逐次微调</p></div>
+        <div class="tags"><span>剥线机</span><span>线径调整</span><span>断丝处理</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_wire_diameter_depth_20260627_0509_509fee.jpg" alt="调整线径">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_wire_diameter_depth_20260627_0509_509fee.mp4"><track src="assets/subtitles/dwz808_wire_diameter_depth_20260627_0509_509fee_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>调整线径试切</h3>
+        <p class="summary">确认剥线效果，调整刀口深度使线皮完全切开但不伤芯线</p>
+        <div class="field"><strong>为什么要做？</strong><p>确认剥线效果，调整刀口深度使线皮完全切开但不伤芯线</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>换线材或首次调试时，试切发现剥不开或伤芯线</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按运行键切一根线</li><li>观察剥皮口是否切开</li><li>若未拨开，按停机键</li><li>在线径参数加6（如140→146）</li><li>再按运行键试切</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>线头两端有刮印且能完整拨开，芯线无损伤</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>未按停机就改参数</li><li>线径增加过多导致伤芯线</li><li>只看一端就判断</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>线径：140，表示当前刀口切入深度（数值越大切越深）</li><li>线径增加值+6，每次调整建议微调6个单位</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>调整线径后必须重新试切，改太大可能切断芯线</p></div>
+        <div class="tags"><span>剥线机</span><span>调试</span><span>线径校准</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_wire_diameter_depth_20260627_0536_879c83.jpg" alt="调整线径试切">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_wire_diameter_depth_20260627_0536_879c83.mp4"><track src="assets/subtitles/dwz808_wire_diameter_depth_20260627_0536_879c83_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>调线径参数</h3>
+        <p class="summary">确保剥线深度合适，不伤铜丝且剥皮干净</p>
+        <div class="field"><strong>为什么要做？</strong><p>确保剥线深度合适，不伤铜丝且剥皮干净</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>检查剥线结果时，发现铜丝有断丝或剥皮不干净</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>观察头尾剥皮是否断铜丝</li><li>如不断铜丝则按线径确认使用</li><li>如断铜丝则减小线径值</li><li>输入减小后的线径如144</li><li>按确认键保存参数</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>再剥一根线检查，铜丝无断裂，剥皮干净整齐</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>忘了观察铜丝是否断裂就改参数</li><li>改参数后没按确认保存</li><li>一次减小太多导致剥皮不到位</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>146：当前线径参数，数值越小刀口切入越浅</li><li>144：调小后的线径参数，减少刀口切入深度</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>每次调整后必须再试剥一根确认，避免盲目调小导致剥皮不彻底</p></div>
+        <div class="tags"><span>剥线机</span><span>参数调整</span><span>线径</span><span>新手操作</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_wire_diameter_depth_20260627_0536_2fb65b.jpg" alt="调线径参数">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_wire_diameter_depth_20260627_0536_2fb65b.mp4"><track src="assets/subtitles/dwz808_wire_diameter_depth_20260627_0536_2fb65b_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>调线径防断芯</h3>
+        <p class="summary">调整线径数值，防止剥线时切断内部铜丝</p>
+        <div class="field"><strong>为什么要做？</strong><p>调整线径数值，防止剥线时切断内部铜丝</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>剥线后观察到线头有铜丝断掉时</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>观察剥线后的线缆</li><li>确认半剥端和全剥端铜丝情况</li><li>按线径键调出参数</li><li>减小当前线径值</li><li>按确认键保存新值</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>再次剥线后铜丝不断，绝缘皮切断整齐</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>只改一边忘记改另一边</li><li>按了键没有按确认保存</li><li>参数改得太大导致断丝更严重</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>初始线径：146（当前设定值）</li><li>调整后线径：144或143（不切断铜丝的合适值）</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>每次改完必须按确认，否则参数不生效，容易上线就断</p></div>
+        <div class="tags"><span>剥线机</span><span>线径调整</span><span>防断丝</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_wire_diameter_depth_20260627_0717_3da83d.jpg" alt="调线径防断芯">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_wire_diameter_depth_20260627_0717_3da83d.mp4"><track src="assets/subtitles/dwz808_wire_diameter_depth_20260627_0717_3da83d_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>退刀与调速</h3>
+        <p class="summary">调整退刀动作与运行速度</p>
+        <div class="field"><strong>为什么要做？</strong><p>调整退刀动作与运行速度</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p></p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按线间小数点键退刀</li><li>输入4后按集挺或退出</li><li>如需调速输入数字5</li><li>按集挺或退出确认</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p></p></div>
+        <div class="field"><strong>常见错误</strong></div>
+        <div class="field"><strong>关键参数</strong></div>
+        <div class="field"><strong>注意事项</strong><p>速度太快可调至5（中速），避免损坏线材</p></div>
+        <div class="tags"><span>退刀</span><span>速度调节</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <div class="placeholder">素材待补充</div>
+        <h4>教学片段</h4>
+        <div class="placeholder">素材待补充</div>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>退刀调速度</h3>
+        <p class="summary">退刀以防刀片卡线，调整剥皮速度至合适档位</p>
+        <div class="field"><strong>为什么要做？</strong><p>退刀以防刀片卡线，调整剥皮速度至合适档位</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>换线或调试后需剥皮，且感觉速度过快或过慢时</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按线间小数点键退刀</li><li>输入数字4或5</li><li>按集挺或退出确认</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>刀片回退到位，屏幕上速度参数显示为5</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>退刀前未确认刀片是否压紧</li><li>改完数字后忘记按集挺或退出确认</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>4：快速挡，用于快速剥皮</li><li>5：中速挡，初学者或线材较脆时使用</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>退刀前确认机器处于停止状态，避免切伤手或线材</p></div>
+        <div class="tags"><span>退刀</span><span>速度调节</span><span>剥线操作</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_retract_and_speed_20260627_0651_70be2d.jpg" alt="退刀调速度">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_retract_and_speed_20260627_0651_70be2d.mp4"><track src="assets/subtitles/dwz808_retract_and_speed_20260627_0651_70be2d_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+            </section>
+            
+            <section class="section" id="operation">
+              <h2>基础操作</h2>
+              
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>切换程序</h3>
+        <p class="summary">切换到新程序重新编程</p>
+        <div class="field"><strong>为什么要做？</strong><p>切换到新程序重新编程</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p></p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按程序号键</li><li>输入6</li><li>按确认或退出键</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p></p></div>
+        <div class="field"><strong>常见错误</strong></div>
+        <div class="field"><strong>关键参数</strong><ul><li>程序号：6，用于切换到新程序</li><li>线长：5位数，例如100表示100毫米</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>切换程序前确认当前程序数据已保存</p></div>
+        <div class="tags"><span>程序设置</span><span>线长设置</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <div class="placeholder">素材待补充</div>
+        <h4>教学片段</h4>
+        <div class="placeholder">素材待补充</div>
+      </div>
+    </article>
+    
+    <article class="skill-card">
+      <div class="skill-main">
+        <p class="eyebrow">教学卡</p>
+        <h3>切换程序设线长</h3>
+        <p class="summary">更换到新的程序并设定裁线长度，避免混用老参数</p>
+        <div class="field"><strong>为什么要做？</strong><p>更换到新的程序并设定裁线长度，避免混用老参数</p></div>
+        <div class="field"><strong>什么时候需要？</strong><p>需要换线材或重新编程时</p></div>
+        <div class="field"><strong>操作步骤</strong><ol><li>按下【程序号】键</li><li>按数字6，切换到6号程序</li><li>按【确认或退出】保存选择</li><li>按【线长】键进入长度设置</li><li>输入100，按确认</li></ol></div>
+        <div class="field"><strong>成功标准</strong><p>屏幕显示程序号变为06，线长显示100</p></div>
+        <div class="field"><strong>常见错误</strong><ul><li>忘记按确认，导致程序没切换</li><li>输入数字后未按退出，其他参数被误改</li><li>误把线长单位当成厘米</li></ul></div>
+        <div class="field"><strong>关键参数</strong><ul><li>程序号：6，新程序编号</li><li>线长：100，表示裁线长度为100毫米</li></ul></div>
+        <div class="field"><strong>注意事项</strong><p>切换程序后必须确认保存，否则仍运行旧程序参数</p></div>
+        <div class="tags"><span>程序切换</span><span>线长设置</span><span>新手上机</span></div>
+      </div>
+      <div class="media">
+        <h4>操作图片</h4>
+        <img src="assets/images/dwz808_switch_program_20260627_0651_485a75.jpg" alt="切换程序设线长">
+        <h4>教学片段</h4>
+        <video controls preload="metadata" src="assets/clips/dwz808_switch_program_20260627_0651_485a75.mp4"><track src="assets/subtitles/dwz808_switch_program_20260627_0651_485a75_zh.srt" kind="subtitles" srclang="zh" label="zh"></video>
+      </div>
+    </article>
+    
+            </section>
+            
+            <section class="section" id="trial">
+              <h2>试切调机</h2>
+              <p class="empty">素材待补充</p>
+            </section>
+            
+            <section class="section" id="alarm_center">
+              <h2>报警处理</h2>
+              <p class="empty">素材待补充</p>
+            </section>
+            
+            <section class="section" id="maintenance">
+              <h2>维护保养</h2>
+              <p class="empty">素材待补充</p>
+            </section>
+            
+            <section class="section" id="faq">
+              <h2>常见问题</h2>
+              <p class="empty">素材待补充</p>
+            </section>
+            
+            <section class="section" id="download">
+              <h2>下载资料</h2>
+              <p class="empty">素材待补充</p>
+            </section>
+            
 
-    <section class="section">
-      <h2>4. Training Steps</h2>
-      <p class="muted">Each step includes a training card, operation image, and corresponding English subtitled video segment.</p>
-      <div class="timeline"><article class="timeline-item"><div class="timeline-content"><div class="step-heading"><span class="step-number">Step 1</span><h3>Trial Cut - Adjust Cutter Depth</h3><span class="step-time">00:00:00</span></div><section class="skill-card training-card"><h4>Training Card</h4><div class="skill-field hero-field"><strong>Step Name</strong><span>Trial Cut - Adjust Cutter Depth</span></div><div class="skill-field"><strong>Why do this?</strong><span>Verify data and fine-tune cutter depth to ensure proper strip depth</span></div><div class="skill-field"><strong>When is this needed?</strong><span>After entering a new program, changing wire, or during first trial cut</span></div><div class="skill-field"><strong>Operation Steps</strong><ol><li>Press Run button to cut one piece</li><li>Check both ends of the cut wire for scoring but not stripped</li><li>Press Stop button to stop</li><li>Press Cutter Depth key and increase the value (e.g., from 140 to 146)</li><li>Press Run button again to trial cut</li></ol></div><div class="skill-field success-field"><strong>Success Check</strong><span>Stripped ends clean, no scratches, no un-stripped areas</span></div><div class="skill-field mistake-field"><strong>Common Mistakes</strong><ul><li>Forgetting to press Stop before adjusting parameters</li><li>Increasing cutter depth too much, damaging the conductor</li><li>Adjusting too large a step and overshooting the optimal value</li></ul></div><div class="skill-field"><strong>Key Values</strong><ul><li>Cutter depth 140: current parameter, unit 0.01 mm</li><li>Cutter depth 146: increased parameter, deeper strip depth</li></ul></div><div class="skill-field warning-field"><strong>Warnings</strong><span>Do not increase cutter depth too much at once to avoid cutting copper strands; always stop the machine before changing parameters</span></div><div class="skill-field"><strong>Tags</strong><span>trial cut / cutter depth adjustment / wire stripper</span></div></section><div class="media-grid"><div class="shot-panel"><h4>Operation Image</h4><button class="screenshot-button" type="button" data-full="images/00-00-00.jpg" data-title="00:00:00"><img src="images/00-00-00.jpg" alt="Operation image 00:00:00"></button></div><div class="video-panel"><h4>Training Video</h4><div class="clip-box"><div class="clip-meta">Video segment: 00:00:00 - 00:00:30</div><video controls preload="metadata" src="clips/clip_001_00-00-00_to_00-00-30.mp4"></video><div class="speed-control"><span>Playback speed</span><button type="button" data-speed="0.5">0.5</button><button type="button" data-speed="1">1.0</button><button type="button" data-speed="1.5">1.5</button><button type="button" data-speed="2">2.0</button></div></div></div></div></div></article>
-<article class="timeline-item"><div class="timeline-content"><div class="step-heading"><span class="step-number">Step 2</span><h3>Adjust Cutter Depth to Prevent Core Breakage</h3><span class="step-time">00:00:34</span></div><section class="skill-card training-card"><h4>Training Card</h4><div class="skill-field hero-field"><strong>Step Name</strong><span>Adjust Cutter Depth to Prevent Core Breakage</span></div><div class="skill-field"><strong>Why do this?</strong><span>Adjust the cutter depth value to prevent cutting internal copper wires during stripping.</span></div><div class="skill-field"><strong>When is this needed?</strong><span>When copper wires are found broken at the front strip after stripping.</span></div><div class="skill-field"><strong>Operation Steps</strong><ol><li>Observe the stripped cable.</li><li>Check copper wire condition on both half-strip and full-strip ends.</li><li>Press the cutter depth key to access the parameter.</li><li>Decrease the current cutter depth value.</li><li>Press the confirm key to save the new value.</li></ol></div><div class="skill-field success-field"><strong>Success Check</strong><span>After stripping again, no copper wires are broken, and the insulation is cut cleanly.</span></div><div class="skill-field mistake-field"><strong>Common Mistakes</strong><ul><li>Adjusted only one side and forgot the other.</li><li>Pressed a key but did not press confirm to save.</li><li>Increased the value too much, causing more breakage.</li></ul></div><div class="skill-field"><strong>Key Values</strong><ul><li>Initial cutter depth: 146 (current setting)</li><li>Adjusted cutter depth: 144 or 143 (suitable value without breaking copper wires)</li></ul></div><div class="skill-field warning-field"><strong>Warnings</strong><span>Always press confirm after each adjustment, otherwise the parameter will not take effect and wire breakage may occur immediately.</span></div><div class="skill-field"><strong>Tags</strong><span>Wire stripper / Cutter depth adjustment / Core breakage prevention</span></div></section><div class="media-grid"><div class="shot-panel"><h4>Operation Image</h4><button class="screenshot-button" type="button" data-full="images/00-00-34.jpg" data-title="00:00:34"><img src="images/00-00-34.jpg" alt="Operation image 00:00:34"></button></div><div class="video-panel"><h4>Training Video</h4><div class="clip-box"><div class="clip-meta">Video segment: 00:00:30 - 00:01:00</div><video controls preload="metadata" src="clips/clip_002_00-00-30_to_00-01-00.mp4"></video><div class="speed-control"><span>Playback speed</span><button type="button" data-speed="0.5">0.5</button><button type="button" data-speed="1">1.0</button><button type="button" data-speed="1.5">1.5</button><button type="button" data-speed="2">2.0</button></div></div></div></div></div></article></div>
-    </section>
-  </main>
-
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <div class="lightbox-title" id="lightbox-title"></div>
-    <button class="lightbox-close" id="lightbox-close" type="button">Close</button>
-    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button">Previous</button>
-    <img id="lightbox-image" alt="Expanded operation image">
-    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button">Next</button>
-  </div>
-
-  <script>
-    (function () {
-      var lightbox = document.getElementById("lightbox");
-      var image = document.getElementById("lightbox-image");
-      var title = document.getElementById("lightbox-title");
-      var closeButton = document.getElementById("lightbox-close");
-      var previousButton = document.getElementById("lightbox-prev");
-      var nextButton = document.getElementById("lightbox-next");
-      var screenshotButtons = Array.prototype.slice.call(document.querySelectorAll(".screenshot-button"));
-      var currentIndex = -1;
-
-      function closeLightbox() {
-        lightbox.classList.remove("open");
-        lightbox.setAttribute("aria-hidden", "true");
-        image.removeAttribute("src");
-      }
-
-      function showImage(index) {
-        if (!screenshotButtons.length) {
-          return;
-        }
-        currentIndex = (index + screenshotButtons.length) % screenshotButtons.length;
-        var button = screenshotButtons[currentIndex];
-        image.src = button.getAttribute("data-full");
-        title.textContent = button.getAttribute("data-title") || "";
-      }
-
-      screenshotButtons.forEach(function (button, index) {
-        button.addEventListener("click", function () {
-          showImage(index);
-          lightbox.classList.add("open");
-          lightbox.setAttribute("aria-hidden", "false");
-        });
-      });
-
-      lightbox.addEventListener("click", function (event) {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-      closeButton.addEventListener("click", closeLightbox);
-      previousButton.addEventListener("click", function (event) {
-        event.stopPropagation();
-        showImage(currentIndex - 1);
-      });
-      nextButton.addEventListener("click", function (event) {
-        event.stopPropagation();
-        showImage(currentIndex + 1);
-      });
-      document.addEventListener("keydown", function (event) {
-        if (!lightbox.classList.contains("open")) {
-          return;
-        }
-        if (event.key === "Escape") {
-          closeLightbox();
-        } else if (event.key === "ArrowLeft") {
-          showImage(currentIndex - 1);
-        } else if (event.key === "ArrowRight") {
-          showImage(currentIndex + 1);
-        }
-      });
-
-      document.querySelectorAll(".speed-control").forEach(function (control) {
-        var wrapper = control.closest(".video-panel, .clip-box");
-        var video = wrapper ? wrapper.querySelector("video") : null;
-        if (!video) {
-          return;
-        }
-        control.querySelectorAll("button").forEach(function (button) {
-          if (button.getAttribute("data-speed") === "1") {
-            button.classList.add("active");
-          }
-          button.addEventListener("click", function () {
-            var speed = parseFloat(button.getAttribute("data-speed"));
-            if (!Number.isNaN(speed)) {
-              video.playbackRate = speed;
-            }
-            control.querySelectorAll("button").forEach(function (item) {
-              item.classList.remove("active");
-            });
-            button.classList.add("active");
-          });
-        });
-      });
-    })();
-  </script>
+  <footer>Wirexa 客户培训资料。 Updated at 2026-06-28T08:30:43.</footer>
+</main>
 </body>
 </html>

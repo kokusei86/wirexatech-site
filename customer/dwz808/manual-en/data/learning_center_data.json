@@ -1,0 +1,1592 @@
+{
+  "schema_version": "5.0",
+  "equipment": "DWZ-808",
+  "title_en": "DWZ-808 Learning Center",
+  "title_zh": "DWZ-808 学习中心",
+  "generated_at": "2026-06-28T08:30:43",
+  "preview_only": true,
+  "categories": [
+    {
+      "id": "quick_start",
+      "title_en": "Quick Start",
+      "title_zh": "快速上手",
+      "order": 10,
+      "skills": [
+        {
+          "skill_id": "dwz808_stripping_setting_20260625_1831_09a57a",
+          "title_en": "设置剥皮参数",
+          "title_zh": "设置剥皮参数",
+          "summary_en": "设定线头剥皮长度和剥皮方式",
+          "summary_zh": "设定线头剥皮长度和剥皮方式",
+          "purpose_en": "设定线头剥皮长度和剥皮方式",
+          "purpose_zh": "设定线头剥皮长度和剥皮方式",
+          "when_en": "",
+          "when_zh": "",
+          "operations_en": [
+            "按线头剥皮键",
+            "输入5表示5毫米",
+            "按确认键",
+            "按剥皮方式键",
+            "选择全拨或半拨"
+          ],
+          "operations_zh": [
+            "按线头剥皮键",
+            "输入5表示5毫米",
+            "按确认键",
+            "按剥皮方式键",
+            "选择全拨或半拨"
+          ],
+          "success_check_en": "",
+          "success_check_zh": "",
+          "common_mistakes_en": [],
+          "common_mistakes_zh": [],
+          "key_values_en": [
+            "线头剥皮长度：5毫米，决定前端去皮长度",
+            "剥皮方式：全拨或半拨，控制剥皮后皮是否完全去掉"
+          ],
+          "key_values_zh": [
+            "线头剥皮长度：5毫米，决定前端去皮长度",
+            "剥皮方式：全拨或半拨，控制剥皮后皮是否完全去掉"
+          ],
+          "warning_en": "半拨时需确认参数正确，避免剥皮不完整",
+          "warning_zh": "半拨时需确认参数正确，避免剥皮不完整",
+          "tags_en": [
+            "剥线机",
+            "参数设置",
+            "剥皮"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "参数设置",
+            "剥皮"
+          ],
+          "category_id": "quick_start",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "参数设置",
+            "剥皮"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "设定线头剥皮长度和剥皮方式",
+            "when": "",
+            "operations": [
+              "按线头剥皮键",
+              "输入5表示5毫米",
+              "按确认键",
+              "按剥皮方式键",
+              "选择全拨或半拨"
+            ],
+            "success_check": "",
+            "common_mistakes": [],
+            "key_values": [
+              "线头剥皮长度：5毫米，决定前端去皮长度",
+              "剥皮方式：全拨或半拨，控制剥皮后皮是否完全去掉"
+            ],
+            "warning": "半拨时需确认参数正确，避免剥皮不完整",
+            "tags": [
+              "剥线机",
+              "参数设置",
+              "剥皮"
+            ]
+          },
+          "assets": {},
+          "missing_assets": [
+            "source_output",
+            "image",
+            "video",
+            "clip",
+            "subtitle_en",
+            "subtitle_zh"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:00:30",
+            "end": "00:01:00",
+            "source_output": "",
+            "skill_file": "skills/dwz808_stripping_setting_20260625_1831_09a57a.json"
+          },
+          "version": {
+            "updated_at": "2026-06-25T19:25:45",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        }
+      ]
+    },
+    {
+      "id": "parameter_setup",
+      "title_en": "Parameter Setup",
+      "title_zh": "参数设置",
+      "order": 20,
+      "skills": [
+        {
+          "skill_id": "dwz808_length_setting_20260627_0651_475bc2",
+          "title_en": "剥线参数设定",
+          "title_zh": "剥线参数设定",
+          "summary_en": "设置线材两端剥皮长度和剥皮方式，确保剥皮尺寸准确",
+          "summary_zh": "设置线材两端剥皮长度和剥皮方式，确保剥皮尺寸准确",
+          "purpose_en": "设置线材两端剥皮长度和剥皮方式，确保剥皮尺寸准确",
+          "purpose_zh": "设置线材两端剥皮长度和剥皮方式，确保剥皮尺寸准确",
+          "when_en": "更换线材型号或调整剥皮长度要求时",
+          "when_zh": "更换线材型号或调整剥皮长度要求时",
+          "operations_en": [
+            "按头拨键输入前端剥皮毫米数",
+            "按尾拨键输入后端剥皮毫米数",
+            "选择剥皮模式：全拨或半拨",
+            "按定量键查看当前剥皮数量",
+            "确认定量数值正确后按退出"
+          ],
+          "operations_zh": [
+            "按头拨键输入前端剥皮毫米数",
+            "按尾拨键输入后端剥皮毫米数",
+            "选择剥皮模式：全拨或半拨",
+            "按定量键查看当前剥皮数量",
+            "确认定量数值正确后按退出"
+          ],
+          "success_check_en": "屏幕显示设定的头拨、尾拨数值，定量数值与预期一致",
+          "success_check_zh": "屏幕显示设定的头拨、尾拨数值，定量数值与预期一致",
+          "common_mistakes_en": [
+            "忘记区分头拨和尾拨设置",
+            "半拨模式选择错误导致剥皮不完整",
+            "定量输入后没按确认保存"
+          ],
+          "common_mistakes_zh": [
+            "忘记区分头拨和尾拨设置",
+            "半拨模式选择错误导致剥皮不完整",
+            "定量输入后没按确认保存"
+          ],
+          "key_values_en": [
+            "头拨:5毫米，表示前端剥皮长度",
+            "尾拨:5毫米，表示后端剥皮长度",
+            "半拨:表示剥皮后皮不完全脱离",
+            "定量:剥皮数量，默认为5个0即无限"
+          ],
+          "key_values_zh": [
+            "头拨:5毫米，表示前端剥皮长度",
+            "尾拨:5毫米，表示后端剥皮长度",
+            "半拨:表示剥皮后皮不完全脱离",
+            "定量:剥皮数量，默认为5个0即无限"
+          ],
+          "warning_en": "半拨模式下剥皮位置不准，需先确认线头定位",
+          "warning_zh": "半拨模式下剥皮位置不准，需先确认线头定位",
+          "tags_en": [
+            "剥线机",
+            "参数设置",
+            "剥皮长度",
+            "半拨"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "参数设置",
+            "剥皮长度",
+            "半拨"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "参数设置",
+            "剥皮长度",
+            "半拨"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "设置线材两端剥皮长度和剥皮方式，确保剥皮尺寸准确",
+            "when": "更换线材型号或调整剥皮长度要求时",
+            "operations": [
+              "按头拨键输入前端剥皮毫米数",
+              "按尾拨键输入后端剥皮毫米数",
+              "选择剥皮模式：全拨或半拨",
+              "按定量键查看当前剥皮数量",
+              "确认定量数值正确后按退出"
+            ],
+            "success_check": "屏幕显示设定的头拨、尾拨数值，定量数值与预期一致",
+            "common_mistakes": [
+              "忘记区分头拨和尾拨设置",
+              "半拨模式选择错误导致剥皮不完整",
+              "定量输入后没按确认保存"
+            ],
+            "key_values": [
+              "头拨:5毫米，表示前端剥皮长度",
+              "尾拨:5毫米，表示后端剥皮长度",
+              "半拨:表示剥皮后皮不完全脱离",
+              "定量:剥皮数量，默认为5个0即无限"
+            ],
+            "warning": "半拨模式下剥皮位置不准，需先确认线头定位",
+            "tags": [
+              "剥线机",
+              "参数设置",
+              "剥皮长度",
+              "半拨"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_length_setting_20260627_0651_475bc2.jpg",
+            "video": "assets/videos/dwz808_length_setting_20260627_0651_475bc2.mp4",
+            "clip": "assets/clips/dwz808_length_setting_20260627_0651_475bc2.mp4",
+            "subtitle_zh": "assets/subtitles/dwz808_length_setting_20260627_0651_475bc2_zh.srt"
+          },
+          "missing_assets": [
+            "subtitle_en"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:00:30",
+            "end": "00:01:00",
+            "source_output": "output/调试2_2026-06-27_0651",
+            "skill_file": "skills/dwz808_length_setting_20260627_0651_475bc2.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T06:53:18",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260627_0651_97f670",
+          "title_en": "设置线径参数",
+          "title_zh": "设置线径参数",
+          "summary_en": "调整刀片切入深度，确保剥皮不伤线芯",
+          "summary_zh": "调整刀片切入深度，确保剥皮不伤线芯",
+          "purpose_en": "调整刀片切入深度，确保剥皮不伤线芯",
+          "purpose_zh": "调整刀片切入深度，确保剥皮不伤线芯",
+          "when_en": "换线材时或试切后发现剥皮不良",
+          "when_zh": "换线材时或试切后发现剥皮不良",
+          "operations_en": [
+            "选中线径参数栏",
+            "输入目标数值（如140）",
+            "按确认键保存",
+            "按小数点键退刀"
+          ],
+          "operations_zh": [
+            "选中线径参数栏",
+            "输入目标数值（如140）",
+            "按确认键保存",
+            "按小数点键退刀"
+          ],
+          "success_check_en": "屏幕线径数值变为设定值，刀片自动退回",
+          "success_check_zh": "屏幕线径数值变为设定值，刀片自动退回",
+          "common_mistakes_en": [
+            "忘记按确认导致参数未保存",
+            "线径过大切断线芯",
+            "线径过小剥皮不净"
+          ],
+          "common_mistakes_zh": [
+            "忘记按确认导致参数未保存",
+            "线径过大切断线芯",
+            "线径过小剥皮不净"
+          ],
+          "key_values_en": [
+            "线径：刀切入深度，通常0.75平方线设140左右",
+            "长量：当前已加工数量",
+            "设定计数：目标加工数（如100），到数停机"
+          ],
+          "key_values_zh": [
+            "线径：刀切入深度，通常0.75平方线设140左右",
+            "长量：当前已加工数量",
+            "设定计数：目标加工数（如100），到数停机"
+          ],
+          "warning_en": "线径值需根据线材软硬试切调整，过大易伤线芯",
+          "warning_zh": "线径值需根据线材软硬试切调整，过大易伤线芯",
+          "tags_en": [
+            "剥线机",
+            "参数调整",
+            "线径"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "参数调整",
+            "线径"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "参数调整",
+            "线径"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "调整刀片切入深度，确保剥皮不伤线芯",
+            "when": "换线材时或试切后发现剥皮不良",
+            "operations": [
+              "选中线径参数栏",
+              "输入目标数值（如140）",
+              "按确认键保存",
+              "按小数点键退刀"
+            ],
+            "success_check": "屏幕线径数值变为设定值，刀片自动退回",
+            "common_mistakes": [
+              "忘记按确认导致参数未保存",
+              "线径过大切断线芯",
+              "线径过小剥皮不净"
+            ],
+            "key_values": [
+              "线径：刀切入深度，通常0.75平方线设140左右",
+              "长量：当前已加工数量",
+              "设定计数：目标加工数（如100），到数停机"
+            ],
+            "warning": "线径值需根据线材软硬试切调整，过大易伤线芯",
+            "tags": [
+              "剥线机",
+              "参数调整",
+              "线径"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_wire_diameter_depth_20260627_0651_97f670.jpg",
+            "video": "assets/videos/dwz808_wire_diameter_depth_20260627_0651_97f670.mp4",
+            "clip": "assets/clips/dwz808_wire_diameter_depth_20260627_0651_97f670.mp4",
+            "subtitle_zh": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0651_97f670_zh.srt"
+          },
+          "missing_assets": [
+            "subtitle_en"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:01:00",
+            "end": "00:01:30",
+            "source_output": "output/调试2_2026-06-27_0651",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260627_0651_97f670.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T06:53:18",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260625_1831_5ce209",
+          "title_en": "设置裁线数量与线径",
+          "title_zh": "设置裁线数量与线径",
+          "summary_en": "设定裁切段数和刀口深度",
+          "summary_zh": "设定裁切段数和刀口深度",
+          "purpose_en": "设定裁切段数和刀口深度",
+          "purpose_zh": "设定裁切段数和刀口深度",
+          "when_en": "",
+          "when_zh": "",
+          "operations_en": [
+            "输入目标数量如100",
+            "按确认键启动计数",
+            "输入线径值如140",
+            "按线径键确认",
+            "按小数点可退刀"
+          ],
+          "operations_zh": [
+            "输入目标数量如100",
+            "按确认键启动计数",
+            "输入线径值如140",
+            "按线径键确认",
+            "按小数点可退刀"
+          ],
+          "success_check_en": "",
+          "success_check_zh": "",
+          "common_mistakes_en": [],
+          "common_mistakes_zh": [],
+          "key_values_en": [
+            "数量：100，表示裁切100根后停机",
+            "长量：当前已裁切数，初始为0",
+            "线径：刀口切入深度，通常设120-160",
+            "当前线径：140，适配0.75平方线"
+          ],
+          "key_values_zh": [
+            "数量：100，表示裁切100根后停机",
+            "长量：当前已裁切数，初始为0",
+            "线径：刀口切入深度，通常设120-160",
+            "当前线径：140，适配0.75平方线"
+          ],
+          "warning_en": "线径过大可能切伤芯线，过小可能剥皮不净，需试切调整",
+          "warning_zh": "线径过大可能切伤芯线，过小可能剥皮不净，需试切调整",
+          "tags_en": [
+            "数量设定",
+            "线径调整",
+            "剥线机"
+          ],
+          "tags_zh": [
+            "数量设定",
+            "线径调整",
+            "剥线机"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "数量设定",
+            "线径调整",
+            "剥线机"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "设定裁切段数和刀口深度",
+            "when": "",
+            "operations": [
+              "输入目标数量如100",
+              "按确认键启动计数",
+              "输入线径值如140",
+              "按线径键确认",
+              "按小数点可退刀"
+            ],
+            "success_check": "",
+            "common_mistakes": [],
+            "key_values": [
+              "数量：100，表示裁切100根后停机",
+              "长量：当前已裁切数，初始为0",
+              "线径：刀口切入深度，通常设120-160",
+              "当前线径：140，适配0.75平方线"
+            ],
+            "warning": "线径过大可能切伤芯线，过小可能剥皮不净，需试切调整",
+            "tags": [
+              "数量设定",
+              "线径调整",
+              "剥线机"
+            ]
+          },
+          "assets": {},
+          "missing_assets": [
+            "source_output",
+            "image",
+            "video",
+            "clip",
+            "subtitle_en",
+            "subtitle_zh"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:01:00",
+            "end": "00:01:30",
+            "source_output": "",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260625_1831_5ce209.json"
+          },
+          "version": {
+            "updated_at": "2026-06-25T19:25:45",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260627_0509_a89c92",
+          "title_en": "试切调线径",
+          "title_zh": "试切调线径",
+          "summary_en": "确认剥线效果并调整刀深参数，确保线皮能完全剥开且不伤芯线。",
+          "summary_zh": "确认剥线效果并调整刀深参数，确保线皮能完全剥开且不伤芯线。",
+          "purpose_en": "确认剥线效果并调整刀深参数，确保线皮能完全剥开且不伤芯线。",
+          "purpose_zh": "确认剥线效果并调整刀深参数，确保线皮能完全剥开且不伤芯线。",
+          "when_en": "首次调好数据后或更换线材、剥线效果不佳（如只刮印未剥开）时。",
+          "when_zh": "首次调好数据后或更换线材、剥线效果不佳（如只刮印未剥开）时。",
+          "operations_en": [
+            "按【运行】键让机器切一根",
+            "查看切出的线：两端有刮印但未剥开",
+            "按【线径】键进入参数",
+            "输入比原值大的数值（如原140调为146）",
+            "再次按【运行】键试切检查"
+          ],
+          "operations_zh": [
+            "按【运行】键让机器切一根",
+            "查看切出的线：两端有刮印但未剥开",
+            "按【线径】键进入参数",
+            "输入比原值大的数值（如原140调为146）",
+            "再次按【运行】键试切检查"
+          ],
+          "success_check_en": "切出的线两端线皮完整剥开，且芯线无损伤。",
+          "success_check_zh": "切出的线两端线皮完整剥开，且芯线无损伤。",
+          "common_mistakes_en": [
+            "忘记按运行就直接看结果",
+            "只改一个数值但不连续试切验证",
+            "数值改得过大导致切断芯线"
+          ],
+          "common_mistakes_zh": [
+            "忘记按运行就直接看结果",
+            "只改一个数值但不连续试切验证",
+            "数值改得过大导致切断芯线"
+          ],
+          "key_values_en": [
+            "线径：140，初始设定的刀口切入深度（单位通常为0.01mm）",
+            "线径：146，调整后的刀口切入深度（增加0.06mm）"
+          ],
+          "key_values_zh": [
+            "线径：140，初始设定的刀口切入深度（单位通常为0.01mm）",
+            "线径：146，调整后的刀口切入深度（增加0.06mm）"
+          ],
+          "warning_en": "线径参数每次调整幅度不宜过大，建议每次增加1-6单位，防止一次性切太深损伤芯线。",
+          "warning_zh": "线径参数每次调整幅度不宜过大，建议每次增加1-6单位，防止一次性切太深损伤芯线。",
+          "tags_en": [
+            "剥线机",
+            "调机",
+            "试切",
+            "线径调整"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "调机",
+            "试切",
+            "线径调整"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "调机",
+            "试切",
+            "线径调整"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "确认剥线效果并调整刀深参数，确保线皮能完全剥开且不伤芯线。",
+            "when": "首次调好数据后或更换线材、剥线效果不佳（如只刮印未剥开）时。",
+            "operations": [
+              "按【运行】键让机器切一根",
+              "查看切出的线：两端有刮印但未剥开",
+              "按【线径】键进入参数",
+              "输入比原值大的数值（如原140调为146）",
+              "再次按【运行】键试切检查"
+            ],
+            "success_check": "切出的线两端线皮完整剥开，且芯线无损伤。",
+            "common_mistakes": [
+              "忘记按运行就直接看结果",
+              "只改一个数值但不连续试切验证",
+              "数值改得过大导致切断芯线"
+            ],
+            "key_values": [
+              "线径：140，初始设定的刀口切入深度（单位通常为0.01mm）",
+              "线径：146，调整后的刀口切入深度（增加0.06mm）"
+            ],
+            "warning": "线径参数每次调整幅度不宜过大，建议每次增加1-6单位，防止一次性切太深损伤芯线。",
+            "tags": [
+              "剥线机",
+              "调机",
+              "试切",
+              "线径调整"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_wire_diameter_depth_20260627_0509_a89c92.jpg",
+            "video": "assets/videos/dwz808_wire_diameter_depth_20260627_0509_a89c92.mp4",
+            "clip": "assets/clips/dwz808_wire_diameter_depth_20260627_0509_a89c92.mp4",
+            "subtitle_zh": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0509_a89c92_zh.srt"
+          },
+          "missing_assets": [
+            "subtitle_en"
+          ],
+          "source": {
+            "video_file": "调试3.mp4",
+            "start": "00:00:00",
+            "end": "00:00:30",
+            "source_output": "output/调试3_2026-06-27_0509",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260627_0509_a89c92.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T05:09:49",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260627_0717_a89c92",
+          "title_en": "试切调线径",
+          "title_zh": "试切调线径",
+          "summary_en": "验证数据并微调线径参数，确保剥皮深度合适",
+          "summary_zh": "验证数据并微调线径参数，确保剥皮深度合适",
+          "purpose_en": "验证数据并微调线径参数，确保剥皮深度合适",
+          "purpose_zh": "验证数据并微调线径参数，确保剥皮深度合适",
+          "when_en": "新程序输入后、换线材后或第一次试切时",
+          "when_zh": "新程序输入后、换线材后或第一次试切时",
+          "operations_en": [
+            "按运行键切一根",
+            "检查切出线材两头有无刮印但未剥开",
+            "按停机键停止",
+            "按线径键，将线径值调大（如从140调至146）",
+            "再按运行键试切"
+          ],
+          "operations_zh": [
+            "按运行键切一根",
+            "检查切出线材两头有无刮印但未剥开",
+            "按停机键停止",
+            "按线径键，将线径值调大（如从140调至146）",
+            "再按运行键试切"
+          ],
+          "success_check_en": "切出的线材两端剥皮干净、无刮痕、无未剥开现象",
+          "success_check_zh": "切出的线材两端剥皮干净、无刮痕、无未剥开现象",
+          "common_mistakes_en": [
+            "忘记按停机后再调参数",
+            "线径调得过大导致伤线芯",
+            "一次调太多跳过最佳值"
+          ],
+          "common_mistakes_zh": [
+            "忘记按停机后再调参数",
+            "线径调得过大导致伤线芯",
+            "一次调太多跳过最佳值"
+          ],
+          "key_values_en": [
+            "线径140：当前线径参数，单位为0.01毫米",
+            "线径146：调大后的线径参数，增加剥皮深度"
+          ],
+          "key_values_zh": [
+            "线径140：当前线径参数，单位为0.01毫米",
+            "线径146：调大后的线径参数，增加剥皮深度"
+          ],
+          "warning_en": "线径不宜一次调太多，容易切伤铜丝；必须先停机再改参数",
+          "warning_zh": "线径不宜一次调太多，容易切伤铜丝；必须先停机再改参数",
+          "tags_en": [
+            "试切",
+            "线径调整",
+            "剥线机"
+          ],
+          "tags_zh": [
+            "试切",
+            "线径调整",
+            "剥线机"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "试切",
+            "线径调整",
+            "剥线机"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "验证数据并微调线径参数，确保剥皮深度合适",
+            "when": "新程序输入后、换线材后或第一次试切时",
+            "operations": [
+              "按运行键切一根",
+              "检查切出线材两头有无刮印但未剥开",
+              "按停机键停止",
+              "按线径键，将线径值调大（如从140调至146）",
+              "再按运行键试切"
+            ],
+            "success_check": "切出的线材两端剥皮干净、无刮痕、无未剥开现象",
+            "common_mistakes": [
+              "忘记按停机后再调参数",
+              "线径调得过大导致伤线芯",
+              "一次调太多跳过最佳值"
+            ],
+            "key_values": [
+              "线径140：当前线径参数，单位为0.01毫米",
+              "线径146：调大后的线径参数，增加剥皮深度"
+            ],
+            "warning": "线径不宜一次调太多，容易切伤铜丝；必须先停机再改参数",
+            "tags": [
+              "试切",
+              "线径调整",
+              "剥线机"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_wire_diameter_depth_20260627_0717_a89c92.jpg",
+            "video": "assets/videos/dwz808_wire_diameter_depth_20260627_0717_a89c92.mp4",
+            "clip": "assets/clips/dwz808_wire_diameter_depth_20260627_0717_a89c92.mp4",
+            "subtitle_en": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0717_a89c92_en.srt",
+            "subtitle_zh": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0717_a89c92_zh.srt"
+          },
+          "missing_assets": [],
+          "source": {
+            "video_file": "DWZ-808 电脑方面设置.mp4",
+            "start": "00:00:00",
+            "end": "00:00:30",
+            "source_output": "output/DWZ-808 电脑方面设置_2026-06-27_0717",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260627_0717_a89c92.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T07:18:38",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260627_0509_509fee",
+          "title_en": "调整线径",
+          "title_zh": "调整线径",
+          "summary_en": "防止铜丝被切断，确保剥皮质量",
+          "summary_zh": "防止铜丝被切断，确保剥皮质量",
+          "purpose_en": "防止铜丝被切断，确保剥皮质量",
+          "purpose_zh": "防止铜丝被切断，确保剥皮质量",
+          "when_en": "观察剥皮后的线头，发现铜丝有断丝时",
+          "when_zh": "观察剥皮后的线头，发现铜丝有断丝时",
+          "operations_en": [
+            "观察剥皮后的线头铜丝状态",
+            "若铜丝未断，按当前线径值确认",
+            "若铜丝断了，按减小键调低线径",
+            "例如当前146调至144或143"
+          ],
+          "operations_zh": [
+            "观察剥皮后的线头铜丝状态",
+            "若铜丝未断，按当前线径值确认",
+            "若铜丝断了，按减小键调低线径",
+            "例如当前146调至144或143"
+          ],
+          "success_check_en": "剥皮后线头铜丝完整无断丝",
+          "success_check_zh": "剥皮后线头铜丝完整无断丝",
+          "common_mistakes_en": [
+            "未观察铜丝直接调参数",
+            "调得过小导致剥皮不净",
+            "未按确认保存修改"
+          ],
+          "common_mistakes_zh": [
+            "未观察铜丝直接调参数",
+            "调得过小导致剥皮不净",
+            "未按确认保存修改"
+          ],
+          "key_values_en": [
+            "146：当前线径数值，表示刀口切入深度",
+            "144或143：减小后的线径数值，用于避免切断铜丝"
+          ],
+          "key_values_zh": [
+            "146：当前线径数值，表示刀口切入深度",
+            "144或143：减小后的线径数值，用于避免切断铜丝"
+          ],
+          "warning_en": "线径改小过多可能剥皮不干净，需逐次微调",
+          "warning_zh": "线径改小过多可能剥皮不干净，需逐次微调",
+          "tags_en": [
+            "剥线机",
+            "线径调整",
+            "断丝处理"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "线径调整",
+            "断丝处理"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "线径调整",
+            "断丝处理"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "防止铜丝被切断，确保剥皮质量",
+            "when": "观察剥皮后的线头，发现铜丝有断丝时",
+            "operations": [
+              "观察剥皮后的线头铜丝状态",
+              "若铜丝未断，按当前线径值确认",
+              "若铜丝断了，按减小键调低线径",
+              "例如当前146调至144或143"
+            ],
+            "success_check": "剥皮后线头铜丝完整无断丝",
+            "common_mistakes": [
+              "未观察铜丝直接调参数",
+              "调得过小导致剥皮不净",
+              "未按确认保存修改"
+            ],
+            "key_values": [
+              "146：当前线径数值，表示刀口切入深度",
+              "144或143：减小后的线径数值，用于避免切断铜丝"
+            ],
+            "warning": "线径改小过多可能剥皮不干净，需逐次微调",
+            "tags": [
+              "剥线机",
+              "线径调整",
+              "断丝处理"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_wire_diameter_depth_20260627_0509_509fee.jpg",
+            "video": "assets/videos/dwz808_wire_diameter_depth_20260627_0509_509fee.mp4",
+            "clip": "assets/clips/dwz808_wire_diameter_depth_20260627_0509_509fee.mp4",
+            "subtitle_zh": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0509_509fee_zh.srt"
+          },
+          "missing_assets": [
+            "subtitle_en"
+          ],
+          "source": {
+            "video_file": "调试3.mp4",
+            "start": "00:00:30",
+            "end": "00:01:00",
+            "source_output": "output/调试3_2026-06-27_0509",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260627_0509_509fee.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T05:09:49",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260627_0536_879c83",
+          "title_en": "调整线径试切",
+          "title_zh": "调整线径试切",
+          "summary_en": "确认剥线效果，调整刀口深度使线皮完全切开但不伤芯线",
+          "summary_zh": "确认剥线效果，调整刀口深度使线皮完全切开但不伤芯线",
+          "purpose_en": "确认剥线效果，调整刀口深度使线皮完全切开但不伤芯线",
+          "purpose_zh": "确认剥线效果，调整刀口深度使线皮完全切开但不伤芯线",
+          "when_en": "换线材或首次调试时，试切发现剥不开或伤芯线",
+          "when_zh": "换线材或首次调试时，试切发现剥不开或伤芯线",
+          "operations_en": [
+            "按运行键切一根线",
+            "观察剥皮口是否切开",
+            "若未拨开，按停机键",
+            "在线径参数加6（如140→146）",
+            "再按运行键试切"
+          ],
+          "operations_zh": [
+            "按运行键切一根线",
+            "观察剥皮口是否切开",
+            "若未拨开，按停机键",
+            "在线径参数加6（如140→146）",
+            "再按运行键试切"
+          ],
+          "success_check_en": "线头两端有刮印且能完整拨开，芯线无损伤",
+          "success_check_zh": "线头两端有刮印且能完整拨开，芯线无损伤",
+          "common_mistakes_en": [
+            "未按停机就改参数",
+            "线径增加过多导致伤芯线",
+            "只看一端就判断"
+          ],
+          "common_mistakes_zh": [
+            "未按停机就改参数",
+            "线径增加过多导致伤芯线",
+            "只看一端就判断"
+          ],
+          "key_values_en": [
+            "线径：140，表示当前刀口切入深度（数值越大切越深）",
+            "线径增加值+6，每次调整建议微调6个单位"
+          ],
+          "key_values_zh": [
+            "线径：140，表示当前刀口切入深度（数值越大切越深）",
+            "线径增加值+6，每次调整建议微调6个单位"
+          ],
+          "warning_en": "调整线径后必须重新试切，改太大可能切断芯线",
+          "warning_zh": "调整线径后必须重新试切，改太大可能切断芯线",
+          "tags_en": [
+            "剥线机",
+            "调试",
+            "线径校准"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "调试",
+            "线径校准"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "调试",
+            "线径校准"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "确认剥线效果，调整刀口深度使线皮完全切开但不伤芯线",
+            "when": "换线材或首次调试时，试切发现剥不开或伤芯线",
+            "operations": [
+              "按运行键切一根线",
+              "观察剥皮口是否切开",
+              "若未拨开，按停机键",
+              "在线径参数加6（如140→146）",
+              "再按运行键试切"
+            ],
+            "success_check": "线头两端有刮印且能完整拨开，芯线无损伤",
+            "common_mistakes": [
+              "未按停机就改参数",
+              "线径增加过多导致伤芯线",
+              "只看一端就判断"
+            ],
+            "key_values": [
+              "线径：140，表示当前刀口切入深度（数值越大切越深）",
+              "线径增加值+6，每次调整建议微调6个单位"
+            ],
+            "warning": "调整线径后必须重新试切，改太大可能切断芯线",
+            "tags": [
+              "剥线机",
+              "调试",
+              "线径校准"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_wire_diameter_depth_20260627_0536_879c83.jpg",
+            "video": "assets/videos/dwz808_wire_diameter_depth_20260627_0536_879c83.mp4",
+            "clip": "assets/clips/dwz808_wire_diameter_depth_20260627_0536_879c83.mp4",
+            "subtitle_en": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0536_879c83_en.srt",
+            "subtitle_zh": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0536_879c83_zh.srt"
+          },
+          "missing_assets": [],
+          "source": {
+            "video_file": "调试3.mp4",
+            "start": "00:00:00",
+            "end": "00:00:30",
+            "source_output": "output/调试3_2026-06-27_0536",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260627_0536_879c83.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T05:37:41",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260627_0536_2fb65b",
+          "title_en": "调线径参数",
+          "title_zh": "调线径参数",
+          "summary_en": "确保剥线深度合适，不伤铜丝且剥皮干净",
+          "summary_zh": "确保剥线深度合适，不伤铜丝且剥皮干净",
+          "purpose_en": "确保剥线深度合适，不伤铜丝且剥皮干净",
+          "purpose_zh": "确保剥线深度合适，不伤铜丝且剥皮干净",
+          "when_en": "检查剥线结果时，发现铜丝有断丝或剥皮不干净",
+          "when_zh": "检查剥线结果时，发现铜丝有断丝或剥皮不干净",
+          "operations_en": [
+            "观察头尾剥皮是否断铜丝",
+            "如不断铜丝则按线径确认使用",
+            "如断铜丝则减小线径值",
+            "输入减小后的线径如144",
+            "按确认键保存参数"
+          ],
+          "operations_zh": [
+            "观察头尾剥皮是否断铜丝",
+            "如不断铜丝则按线径确认使用",
+            "如断铜丝则减小线径值",
+            "输入减小后的线径如144",
+            "按确认键保存参数"
+          ],
+          "success_check_en": "再剥一根线检查，铜丝无断裂，剥皮干净整齐",
+          "success_check_zh": "再剥一根线检查，铜丝无断裂，剥皮干净整齐",
+          "common_mistakes_en": [
+            "忘了观察铜丝是否断裂就改参数",
+            "改参数后没按确认保存",
+            "一次减小太多导致剥皮不到位"
+          ],
+          "common_mistakes_zh": [
+            "忘了观察铜丝是否断裂就改参数",
+            "改参数后没按确认保存",
+            "一次减小太多导致剥皮不到位"
+          ],
+          "key_values_en": [
+            "146：当前线径参数，数值越小刀口切入越浅",
+            "144：调小后的线径参数，减少刀口切入深度"
+          ],
+          "key_values_zh": [
+            "146：当前线径参数，数值越小刀口切入越浅",
+            "144：调小后的线径参数，减少刀口切入深度"
+          ],
+          "warning_en": "每次调整后必须再试剥一根确认，避免盲目调小导致剥皮不彻底",
+          "warning_zh": "每次调整后必须再试剥一根确认，避免盲目调小导致剥皮不彻底",
+          "tags_en": [
+            "剥线机",
+            "参数调整",
+            "线径",
+            "新手操作"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "参数调整",
+            "线径",
+            "新手操作"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "参数调整",
+            "线径",
+            "新手操作"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "确保剥线深度合适，不伤铜丝且剥皮干净",
+            "when": "检查剥线结果时，发现铜丝有断丝或剥皮不干净",
+            "operations": [
+              "观察头尾剥皮是否断铜丝",
+              "如不断铜丝则按线径确认使用",
+              "如断铜丝则减小线径值",
+              "输入减小后的线径如144",
+              "按确认键保存参数"
+            ],
+            "success_check": "再剥一根线检查，铜丝无断裂，剥皮干净整齐",
+            "common_mistakes": [
+              "忘了观察铜丝是否断裂就改参数",
+              "改参数后没按确认保存",
+              "一次减小太多导致剥皮不到位"
+            ],
+            "key_values": [
+              "146：当前线径参数，数值越小刀口切入越浅",
+              "144：调小后的线径参数，减少刀口切入深度"
+            ],
+            "warning": "每次调整后必须再试剥一根确认，避免盲目调小导致剥皮不彻底",
+            "tags": [
+              "剥线机",
+              "参数调整",
+              "线径",
+              "新手操作"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_wire_diameter_depth_20260627_0536_2fb65b.jpg",
+            "video": "assets/videos/dwz808_wire_diameter_depth_20260627_0536_2fb65b.mp4",
+            "clip": "assets/clips/dwz808_wire_diameter_depth_20260627_0536_2fb65b.mp4",
+            "subtitle_en": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0536_2fb65b_en.srt",
+            "subtitle_zh": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0536_2fb65b_zh.srt"
+          },
+          "missing_assets": [],
+          "source": {
+            "video_file": "调试3.mp4",
+            "start": "00:00:30",
+            "end": "00:01:00",
+            "source_output": "output/调试3_2026-06-27_0536",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260627_0536_2fb65b.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T05:37:41",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_wire_diameter_depth_20260627_0717_3da83d",
+          "title_en": "调线径防断芯",
+          "title_zh": "调线径防断芯",
+          "summary_en": "调整线径数值，防止剥线时切断内部铜丝",
+          "summary_zh": "调整线径数值，防止剥线时切断内部铜丝",
+          "purpose_en": "调整线径数值，防止剥线时切断内部铜丝",
+          "purpose_zh": "调整线径数值，防止剥线时切断内部铜丝",
+          "when_en": "剥线后观察到线头有铜丝断掉时",
+          "when_zh": "剥线后观察到线头有铜丝断掉时",
+          "operations_en": [
+            "观察剥线后的线缆",
+            "确认半剥端和全剥端铜丝情况",
+            "按线径键调出参数",
+            "减小当前线径值",
+            "按确认键保存新值"
+          ],
+          "operations_zh": [
+            "观察剥线后的线缆",
+            "确认半剥端和全剥端铜丝情况",
+            "按线径键调出参数",
+            "减小当前线径值",
+            "按确认键保存新值"
+          ],
+          "success_check_en": "再次剥线后铜丝不断，绝缘皮切断整齐",
+          "success_check_zh": "再次剥线后铜丝不断，绝缘皮切断整齐",
+          "common_mistakes_en": [
+            "只改一边忘记改另一边",
+            "按了键没有按确认保存",
+            "参数改得太大导致断丝更严重"
+          ],
+          "common_mistakes_zh": [
+            "只改一边忘记改另一边",
+            "按了键没有按确认保存",
+            "参数改得太大导致断丝更严重"
+          ],
+          "key_values_en": [
+            "初始线径：146（当前设定值）",
+            "调整后线径：144或143（不切断铜丝的合适值）"
+          ],
+          "key_values_zh": [
+            "初始线径：146（当前设定值）",
+            "调整后线径：144或143（不切断铜丝的合适值）"
+          ],
+          "warning_en": "每次改完必须按确认，否则参数不生效，容易上线就断",
+          "warning_zh": "每次改完必须按确认，否则参数不生效，容易上线就断",
+          "tags_en": [
+            "剥线机",
+            "线径调整",
+            "防断丝"
+          ],
+          "tags_zh": [
+            "剥线机",
+            "线径调整",
+            "防断丝"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "剥线机",
+            "线径调整",
+            "防断丝"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "调整线径数值，防止剥线时切断内部铜丝",
+            "when": "剥线后观察到线头有铜丝断掉时",
+            "operations": [
+              "观察剥线后的线缆",
+              "确认半剥端和全剥端铜丝情况",
+              "按线径键调出参数",
+              "减小当前线径值",
+              "按确认键保存新值"
+            ],
+            "success_check": "再次剥线后铜丝不断，绝缘皮切断整齐",
+            "common_mistakes": [
+              "只改一边忘记改另一边",
+              "按了键没有按确认保存",
+              "参数改得太大导致断丝更严重"
+            ],
+            "key_values": [
+              "初始线径：146（当前设定值）",
+              "调整后线径：144或143（不切断铜丝的合适值）"
+            ],
+            "warning": "每次改完必须按确认，否则参数不生效，容易上线就断",
+            "tags": [
+              "剥线机",
+              "线径调整",
+              "防断丝"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_wire_diameter_depth_20260627_0717_3da83d.jpg",
+            "video": "assets/videos/dwz808_wire_diameter_depth_20260627_0717_3da83d.mp4",
+            "clip": "assets/clips/dwz808_wire_diameter_depth_20260627_0717_3da83d.mp4",
+            "subtitle_en": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0717_3da83d_en.srt",
+            "subtitle_zh": "assets/subtitles/dwz808_wire_diameter_depth_20260627_0717_3da83d_zh.srt"
+          },
+          "missing_assets": [],
+          "source": {
+            "video_file": "DWZ-808 电脑方面设置.mp4",
+            "start": "00:00:30",
+            "end": "00:01:00",
+            "source_output": "output/DWZ-808 电脑方面设置_2026-06-27_0717",
+            "skill_file": "skills/dwz808_wire_diameter_depth_20260627_0717_3da83d.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T07:18:38",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_retract_and_speed_20260625_1831_4fb6d6",
+          "title_en": "退刀与调速",
+          "title_zh": "退刀与调速",
+          "summary_en": "调整退刀动作与运行速度",
+          "summary_zh": "调整退刀动作与运行速度",
+          "purpose_en": "调整退刀动作与运行速度",
+          "purpose_zh": "调整退刀动作与运行速度",
+          "when_en": "",
+          "when_zh": "",
+          "operations_en": [
+            "按线间小数点键退刀",
+            "输入4后按集挺或退出",
+            "如需调速输入数字5",
+            "按集挺或退出确认"
+          ],
+          "operations_zh": [
+            "按线间小数点键退刀",
+            "输入4后按集挺或退出",
+            "如需调速输入数字5",
+            "按集挺或退出确认"
+          ],
+          "success_check_en": "",
+          "success_check_zh": "",
+          "common_mistakes_en": [],
+          "common_mistakes_zh": [],
+          "key_values_en": [],
+          "key_values_zh": [],
+          "warning_en": "速度太快可调至5（中速），避免损坏线材",
+          "warning_zh": "速度太快可调至5（中速），避免损坏线材",
+          "tags_en": [
+            "退刀",
+            "速度调节"
+          ],
+          "tags_zh": [
+            "退刀",
+            "速度调节"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "退刀",
+            "速度调节"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "调整退刀动作与运行速度",
+            "when": "",
+            "operations": [
+              "按线间小数点键退刀",
+              "输入4后按集挺或退出",
+              "如需调速输入数字5",
+              "按集挺或退出确认"
+            ],
+            "success_check": "",
+            "common_mistakes": [],
+            "key_values": [],
+            "warning": "速度太快可调至5（中速），避免损坏线材",
+            "tags": [
+              "退刀",
+              "速度调节"
+            ]
+          },
+          "assets": {},
+          "missing_assets": [
+            "source_output",
+            "image",
+            "video",
+            "clip",
+            "subtitle_en",
+            "subtitle_zh"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:01:30",
+            "end": "00:01:56",
+            "source_output": "",
+            "skill_file": "skills/dwz808_retract_and_speed_20260625_1831_4fb6d6.json"
+          },
+          "version": {
+            "updated_at": "2026-06-25T19:25:45",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_retract_and_speed_20260627_0651_70be2d",
+          "title_en": "退刀调速度",
+          "title_zh": "退刀调速度",
+          "summary_en": "退刀以防刀片卡线，调整剥皮速度至合适档位",
+          "summary_zh": "退刀以防刀片卡线，调整剥皮速度至合适档位",
+          "purpose_en": "退刀以防刀片卡线，调整剥皮速度至合适档位",
+          "purpose_zh": "退刀以防刀片卡线，调整剥皮速度至合适档位",
+          "when_en": "换线或调试后需剥皮，且感觉速度过快或过慢时",
+          "when_zh": "换线或调试后需剥皮，且感觉速度过快或过慢时",
+          "operations_en": [
+            "按线间小数点键退刀",
+            "输入数字4或5",
+            "按集挺或退出确认"
+          ],
+          "operations_zh": [
+            "按线间小数点键退刀",
+            "输入数字4或5",
+            "按集挺或退出确认"
+          ],
+          "success_check_en": "刀片回退到位，屏幕上速度参数显示为5",
+          "success_check_zh": "刀片回退到位，屏幕上速度参数显示为5",
+          "common_mistakes_en": [
+            "退刀前未确认刀片是否压紧",
+            "改完数字后忘记按集挺或退出确认"
+          ],
+          "common_mistakes_zh": [
+            "退刀前未确认刀片是否压紧",
+            "改完数字后忘记按集挺或退出确认"
+          ],
+          "key_values_en": [
+            "4：快速挡，用于快速剥皮",
+            "5：中速挡，初学者或线材较脆时使用"
+          ],
+          "key_values_zh": [
+            "4：快速挡，用于快速剥皮",
+            "5：中速挡，初学者或线材较脆时使用"
+          ],
+          "warning_en": "退刀前确认机器处于停止状态，避免切伤手或线材",
+          "warning_zh": "退刀前确认机器处于停止状态，避免切伤手或线材",
+          "tags_en": [
+            "退刀",
+            "速度调节",
+            "剥线操作"
+          ],
+          "tags_zh": [
+            "退刀",
+            "速度调节",
+            "剥线操作"
+          ],
+          "category_id": "parameter_setup",
+          "publish_scope": "public_manual",
+          "tags": [
+            "退刀",
+            "速度调节",
+            "剥线操作"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "退刀以防刀片卡线，调整剥皮速度至合适档位",
+            "when": "换线或调试后需剥皮，且感觉速度过快或过慢时",
+            "operations": [
+              "按线间小数点键退刀",
+              "输入数字4或5",
+              "按集挺或退出确认"
+            ],
+            "success_check": "刀片回退到位，屏幕上速度参数显示为5",
+            "common_mistakes": [
+              "退刀前未确认刀片是否压紧",
+              "改完数字后忘记按集挺或退出确认"
+            ],
+            "key_values": [
+              "4：快速挡，用于快速剥皮",
+              "5：中速挡，初学者或线材较脆时使用"
+            ],
+            "warning": "退刀前确认机器处于停止状态，避免切伤手或线材",
+            "tags": [
+              "退刀",
+              "速度调节",
+              "剥线操作"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_retract_and_speed_20260627_0651_70be2d.jpg",
+            "video": "assets/videos/dwz808_retract_and_speed_20260627_0651_70be2d.mp4",
+            "clip": "assets/clips/dwz808_retract_and_speed_20260627_0651_70be2d.mp4",
+            "subtitle_zh": "assets/subtitles/dwz808_retract_and_speed_20260627_0651_70be2d_zh.srt"
+          },
+          "missing_assets": [
+            "subtitle_en"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:01:30",
+            "end": "00:01:56",
+            "source_output": "output/调试2_2026-06-27_0651",
+            "skill_file": "skills/dwz808_retract_and_speed_20260627_0651_70be2d.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T06:53:18",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        }
+      ]
+    },
+    {
+      "id": "operation",
+      "title_en": "Operation",
+      "title_zh": "基础操作",
+      "order": 30,
+      "skills": [
+        {
+          "skill_id": "dwz808_switch_program_20260625_1831_2cef19",
+          "title_en": "切换程序",
+          "title_zh": "切换程序",
+          "summary_en": "切换到新程序重新编程",
+          "summary_zh": "切换到新程序重新编程",
+          "purpose_en": "切换到新程序重新编程",
+          "purpose_zh": "切换到新程序重新编程",
+          "when_en": "",
+          "when_zh": "",
+          "operations_en": [
+            "按程序号键",
+            "输入6",
+            "按确认或退出键"
+          ],
+          "operations_zh": [
+            "按程序号键",
+            "输入6",
+            "按确认或退出键"
+          ],
+          "success_check_en": "",
+          "success_check_zh": "",
+          "common_mistakes_en": [],
+          "common_mistakes_zh": [],
+          "key_values_en": [
+            "程序号：6，用于切换到新程序",
+            "线长：5位数，例如100表示100毫米"
+          ],
+          "key_values_zh": [
+            "程序号：6，用于切换到新程序",
+            "线长：5位数，例如100表示100毫米"
+          ],
+          "warning_en": "切换程序前确认当前程序数据已保存",
+          "warning_zh": "切换程序前确认当前程序数据已保存",
+          "tags_en": [
+            "程序设置",
+            "线长设置"
+          ],
+          "tags_zh": [
+            "程序设置",
+            "线长设置"
+          ],
+          "category_id": "operation",
+          "publish_scope": "public_manual",
+          "tags": [
+            "程序设置",
+            "线长设置"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "切换到新程序重新编程",
+            "when": "",
+            "operations": [
+              "按程序号键",
+              "输入6",
+              "按确认或退出键"
+            ],
+            "success_check": "",
+            "common_mistakes": [],
+            "key_values": [
+              "程序号：6，用于切换到新程序",
+              "线长：5位数，例如100表示100毫米"
+            ],
+            "warning": "切换程序前确认当前程序数据已保存",
+            "tags": [
+              "程序设置",
+              "线长设置"
+            ]
+          },
+          "assets": {},
+          "missing_assets": [
+            "source_output",
+            "image",
+            "video",
+            "clip",
+            "subtitle_en",
+            "subtitle_zh"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:00:00",
+            "end": "00:00:30",
+            "source_output": "",
+            "skill_file": "skills/dwz808_switch_program_20260625_1831_2cef19.json"
+          },
+          "version": {
+            "updated_at": "2026-06-25T19:25:45",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        },
+        {
+          "skill_id": "dwz808_switch_program_20260627_0651_485a75",
+          "title_en": "切换程序设线长",
+          "title_zh": "切换程序设线长",
+          "summary_en": "更换到新的程序并设定裁线长度，避免混用老参数",
+          "summary_zh": "更换到新的程序并设定裁线长度，避免混用老参数",
+          "purpose_en": "更换到新的程序并设定裁线长度，避免混用老参数",
+          "purpose_zh": "更换到新的程序并设定裁线长度，避免混用老参数",
+          "when_en": "需要换线材或重新编程时",
+          "when_zh": "需要换线材或重新编程时",
+          "operations_en": [
+            "按下【程序号】键",
+            "按数字6，切换到6号程序",
+            "按【确认或退出】保存选择",
+            "按【线长】键进入长度设置",
+            "输入100，按确认"
+          ],
+          "operations_zh": [
+            "按下【程序号】键",
+            "按数字6，切换到6号程序",
+            "按【确认或退出】保存选择",
+            "按【线长】键进入长度设置",
+            "输入100，按确认"
+          ],
+          "success_check_en": "屏幕显示程序号变为06，线长显示100",
+          "success_check_zh": "屏幕显示程序号变为06，线长显示100",
+          "common_mistakes_en": [
+            "忘记按确认，导致程序没切换",
+            "输入数字后未按退出，其他参数被误改",
+            "误把线长单位当成厘米"
+          ],
+          "common_mistakes_zh": [
+            "忘记按确认，导致程序没切换",
+            "输入数字后未按退出，其他参数被误改",
+            "误把线长单位当成厘米"
+          ],
+          "key_values_en": [
+            "程序号：6，新程序编号",
+            "线长：100，表示裁线长度为100毫米"
+          ],
+          "key_values_zh": [
+            "程序号：6，新程序编号",
+            "线长：100，表示裁线长度为100毫米"
+          ],
+          "warning_en": "切换程序后必须确认保存，否则仍运行旧程序参数",
+          "warning_zh": "切换程序后必须确认保存，否则仍运行旧程序参数",
+          "tags_en": [
+            "程序切换",
+            "线长设置",
+            "新手上机"
+          ],
+          "tags_zh": [
+            "程序切换",
+            "线长设置",
+            "新手上机"
+          ],
+          "category_id": "operation",
+          "publish_scope": "public_manual",
+          "tags": [
+            "程序切换",
+            "线长设置",
+            "新手上机"
+          ],
+          "difficulty": "basic",
+          "teaching": {
+            "purpose": "更换到新的程序并设定裁线长度，避免混用老参数",
+            "when": "需要换线材或重新编程时",
+            "operations": [
+              "按下【程序号】键",
+              "按数字6，切换到6号程序",
+              "按【确认或退出】保存选择",
+              "按【线长】键进入长度设置",
+              "输入100，按确认"
+            ],
+            "success_check": "屏幕显示程序号变为06，线长显示100",
+            "common_mistakes": [
+              "忘记按确认，导致程序没切换",
+              "输入数字后未按退出，其他参数被误改",
+              "误把线长单位当成厘米"
+            ],
+            "key_values": [
+              "程序号：6，新程序编号",
+              "线长：100，表示裁线长度为100毫米"
+            ],
+            "warning": "切换程序后必须确认保存，否则仍运行旧程序参数",
+            "tags": [
+              "程序切换",
+              "线长设置",
+              "新手上机"
+            ]
+          },
+          "assets": {
+            "image": "assets/images/dwz808_switch_program_20260627_0651_485a75.jpg",
+            "video": "assets/videos/dwz808_switch_program_20260627_0651_485a75.mp4",
+            "clip": "assets/clips/dwz808_switch_program_20260627_0651_485a75.mp4",
+            "subtitle_zh": "assets/subtitles/dwz808_switch_program_20260627_0651_485a75_zh.srt"
+          },
+          "missing_assets": [
+            "subtitle_en"
+          ],
+          "source": {
+            "video_file": "调试2.mp4",
+            "start": "00:00:00",
+            "end": "00:00:30",
+            "source_output": "output/调试2_2026-06-27_0651",
+            "skill_file": "skills/dwz808_switch_program_20260627_0651_485a75.json"
+          },
+          "version": {
+            "updated_at": "2026-06-27T06:53:18",
+            "model": "deepseek-chat",
+            "ai_engine": "deepseek"
+          }
+        }
+      ]
+    },
+    {
+      "id": "trial",
+      "title_en": "Trial Adjustment",
+      "title_zh": "试切调机",
+      "order": 35,
+      "skills": []
+    },
+    {
+      "id": "alarm_center",
+      "title_en": "Alarm Center",
+      "title_zh": "报警处理",
+      "order": 40,
+      "skills": []
+    },
+    {
+      "id": "maintenance",
+      "title_en": "Maintenance",
+      "title_zh": "维护保养",
+      "order": 50,
+      "skills": []
+    },
+    {
+      "id": "troubleshooting",
+      "title_en": "Troubleshooting",
+      "title_zh": "故障排查",
+      "order": 60,
+      "skills": []
+    },
+    {
+      "id": "faq",
+      "title_en": "FAQ",
+      "title_zh": "常见问题",
+      "order": 70,
+      "skills": []
+    },
+    {
+      "id": "download",
+      "title_en": "Download",
+      "title_zh": "下载资料",
+      "order": 80,
+      "skills": []
+    }
+  ]
+}

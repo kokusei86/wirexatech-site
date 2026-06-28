@@ -1,0 +1,63 @@
+1
+00:00:00,000 --> 00:00:03,900
+Then press Run.
+
+2
+00:00:04,000 --> 00:00:05,900
+Now check the 146.
+
+3
+00:00:06,000 --> 00:00:06,900
+It has stripped the wire.
+
+4
+00:00:07,000 --> 00:00:08,900
+This end is half strip.
+
+5
+00:00:09,000 --> 00:00:09,900
+This end is full strip.
+
+6
+00:00:10,000 --> 00:00:11,900
+Like this.
+
+7
+00:00:12,000 --> 00:00:12,900
+The front is half strip.
+
+8
+00:00:13,000 --> 00:00:13,900
+The rear is full strip.
+
+9
+00:00:14,000 --> 00:00:17,900
+Now check if any wires are broken inside.
+
+10
+00:00:18,000 --> 00:00:18,900
+If none are broken,
+
+11
+00:00:19,000 --> 00:00:22,900
+then use this cutter depth.
+
+12
+00:00:23,000 --> 00:00:23,900
+If broken, reduce the cutter depth.
+
+13
+00:00:24,000 --> 00:00:25,900
+For example, 146.
+
+14
+00:00:26,000 --> 00:00:27,900
+Change it to 144.
+
+15
+00:00:28,000 --> 00:00:28,900
+Or 43.
+
+16
+00:00:29,000 --> 00:00:30,000
+Like this.
